@@ -1,0 +1,47 @@
+! Font clarity settings
+Xft.antialias:  true
+Xft.hintstyle:  hintslight
+Xft.dpi:        100
+
+! Attempting to fix PowerLine fonts
+!URxvt.letterSpace: 1
+URxvt.utf8: true
+URxvt.skipBuiltinGlyphs: true
+
+! disable scrollbar
+URxvt.scrollBar: false 
+
+! to match gnome-terminal "Linux console" scheme
+! foreground/background
+URxvt*background: #0d1926
+URxvt*foreground: #B4E1FD
+*cursorColor    : #D9E6F2
+! black
+URxvt.color0    : #363636
+URxvt.color8    : #424242
+! red
+URxvt.color1    : #FF0883
+URxvt.color9    : #FF1E8E
+! green
+URxvt.color2    : #83FF08
+URxvt.color10   : #8EFF33
+! yellow
+URxvt.color3    : #FF8308
+URxvt.color11   : #FF8E1E
+! blue
+URxvt.color4   : #0883FF
+URxvt.color12  : #1E8EFF
+! magenta
+URxvt.color5   : #8308FF
+URxvt.color13  : #8E1EFF
+! cyan
+URxvt.color6   : #08FF83
+URxvt.color14  : #1EFF8E
+! white
+URxvt.color7   : #B6B6B6
+URxvt.color15  : #C2C2C2
+
+! Font selection
+URxvt.font:     xft:FiraMono-Regular Powerline:style=Regular:pixelsize=11
+URxvt.boldFont: xft:FiraMono-Bold Powerline:style=Bold:pixelsize=11
+!URxvt*font: xft:Monospace:pixelsize=11
