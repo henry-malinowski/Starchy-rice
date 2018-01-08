@@ -1,25 +1,26 @@
 ! ~/.Xresources
 ! vim:set foldmethod=expr foldexpr=getline(v\:lnum)=~'^!##'?'>1'\:'=':
-
-! these settings are subject to taste and that the monitor is 15.6" diagonally
+! these settings are subject to taste and that the monitor is 15.6 inches diagonally
 
 !## Font clarity settings
 Xft.antialias: true
 Xft.hintstyle: hintslight
 Xft.rgba: rgb
-#ifdef X_RESOLUTION
+#ifdef DWIDTH 
     /// HP Pavilion
-    #if (X_RESOLUTION == 1336)
+    #if (DWIDTH == 1336)
         Xft.dpi: 100
     #endif
 
     /// HP Envy
-    #if (X_RESOLUTION == 1920)
+    #if (DWIDTH == 1920)
         Xft.dpi: 141
     #endif
 #else
+    #pragma message ( "Could not detect resolution for setting dpi" )
     Xft.dpi: 96
 #endif
+
 
 !## Attempting to fix PowerLine fonts
 !URxvt.letterSpace: 1
@@ -60,19 +61,20 @@ URxvt.color7    : #B6B6B6
 URxvt.color15   : #C2C2C2
 
 !## Font selection
-#ifdef X_RESOLUTION
+#ifdef DWIDTH 
     /// HP Pavilion
-    #if (X_RESOLUTION == 1336)
+    #if (DWIDTH == 1336)
         URxvt.font:     xft:FiraMono-Regular Powerline:style=Regular:pixelsize=11
         URxvt.boldFont: xft:FiraMono-Bold Powerline:style=Bold:pixelsize=11
     #endif
 
     /// HP Envy
-    #if (X_RESOLUTION == 1920)
+    #if (DWIDTH == 1920)
         URxvt.font:     xft:FiraMono-Regular Powerline:style=Regular:pixelsize=14
         URxvt.boldFont: xft:FiraMono-Bold Powerline:style=Bold:pixelsize=14
     #endif
-!#else
+#else
+    #pragma message ( "Could not detect resolution for Font selection" )
 !    URxvt.font:     xft:FiraMono-Regular Powerline:style=Regular:pixelsize=12
 !    URxvt.boldFont: xft:FiraMono-Bold Powerline:style=Bold:pixelsize=12
 #endif
