@@ -1,17 +1,35 @@
-! Font clarity settings
-Xft.antialias:  true
-Xft.hintstyle:  hintslight
-Xft.dpi:        100
+! ~/.Xresources
+! vim:set foldmethod=expr foldexpr=getline(v\:lnum)=~'^!##'?'>1'\:'=':
 
-! Attempting to fix PowerLine fonts
+! these settings are subject to taste and that the monitor is 15.6" diagonally
+
+!## Font clarity settings
+Xft.antialias: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+#ifdef X_RESOLUTION
+    /// HP Pavilion
+    #if (X_RESOLUTION == 1336)
+        Xft.dpi: 100
+    #endif
+
+    /// HP Envy
+    #if (X_RESOLUTION == 1920)
+        Xft.dpi: 141
+    #endif
+#else
+    Xft.dpi: 96
+#endif
+
+!## Attempting to fix PowerLine fonts
 !URxvt.letterSpace: 1
 URxvt.utf8: true
 URxvt.skipBuiltinGlyphs: true
 
-! disable scrollbar
+!## disable scrollbar
 URxvt.scrollBar: false 
 
-! to match gnome-terminal "Linux console" scheme
+!## Aci color scheme 
 ! foreground/background
 URxvt*background: #0d1926
 URxvt*foreground: #B4E1FD
@@ -29,19 +47,35 @@ URxvt.color10   : #8EFF33
 URxvt.color3    : #FF8308
 URxvt.color11   : #FF8E1E
 ! blue
-URxvt.color4   : #0883FF
-URxvt.color12  : #1E8EFF
+URxvt.color4    : #0883FF
+URxvt.color12   : #1E8EFF
 ! magenta
-URxvt.color5   : #8308FF
-URxvt.color13  : #8E1EFF
+URxvt.color5    : #8308FF
+URxvt.color13   : #8E1EFF
 ! cyan
-URxvt.color6   : #08FF83
-URxvt.color14  : #1EFF8E
+URxvt.color6    : #08FF83
+URxvt.color14   : #1EFF8E
 ! white
-URxvt.color7   : #B6B6B6
-URxvt.color15  : #C2C2C2
+URxvt.color7    : #B6B6B6
+URxvt.color15   : #C2C2C2
 
-! Font selection
-URxvt.font:     xft:FiraMono-Regular Powerline:style=Regular:pixelsize=11
-URxvt.boldFont: xft:FiraMono-Bold Powerline:style=Bold:pixelsize=11
-!URxvt*font: xft:Monospace:pixelsize=11
+!## Font selection
+#ifdef X_RESOLUTION
+    /// HP Pavilion
+    #if (X_RESOLUTION == 1336)
+        URxvt.font:     xft:FiraMono-Regular Powerline:style=Regular:pixelsize=11
+        URxvt.boldFont: xft:FiraMono-Bold Powerline:style=Bold:pixelsize=11
+    #endif
+
+    /// HP Envy
+    #if (X_RESOLUTION == 1920)
+        URxvt.font:     xft:FiraMono-Regular Powerline:style=Regular:pixelsize=14
+        URxvt.boldFont: xft:FiraMono-Bold Powerline:style=Bold:pixelsize=14
+    #endif
+!#else
+!    URxvt.font:     xft:FiraMono-Regular Powerline:style=Regular:pixelsize=12
+!    URxvt.boldFont: xft:FiraMono-Bold Powerline:style=Bold:pixelsize=12
+#endif
+
+ 
+
