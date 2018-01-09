@@ -8,7 +8,7 @@ Xft.hintstyle: hintslight
 Xft.rgba: rgb
 #ifdef WIDTH 
     /// HP Pavilion
-    #if (WIDTH == 1336)
+    #if (WIDTH == 1366)
         Xft.dpi: 100
     #endif
 
@@ -64,7 +64,7 @@ URxvt.color15   : #C2C2C2
 
 #ifdef WIDTH 
     /// HP Pavilion
-    #if (WIDTH == 1336)
+    #if (WIDTH == 1366)
         URxvt.font:     xft:FiraMono-Regular Powerline:style=Regular:pixelsize=11
         URxvt.boldFont: xft:FiraMono-Bold Powerline:style=Bold:pixelsize=11
     #endif
