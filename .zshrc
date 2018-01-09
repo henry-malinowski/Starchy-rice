@@ -6,6 +6,7 @@ export LANG=en_US.UTF-8
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 #Lines configured by zsh-newuser-install
+HISTFILE=~/.cache/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory beep notify
@@ -17,7 +18,7 @@ ZSH=/usr/share/oh-my-zsh
 
 # The following lines were added by compinstall
 zstyle :compinstall file '/home/henry/.zshrc'
-autoload -Uz compinit
+autoload -Uz compinit -d ~/.cache/zompdump-$ZSH_VERSION
 compinit
 # End of lines added by compinstall
 
