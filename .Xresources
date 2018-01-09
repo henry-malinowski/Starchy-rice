@@ -14,7 +14,9 @@ Xft.rgba: rgb
 
     /// HP Envy
     #if (WIDTH == 1920)
-        Xft.dpi: 141
+!        Xft.dpi: 141
+! windows are too big
+        Xft.dpi: 96
     #endif
 #else
     #pragma message ( "Could not detect resolution for setting dpi" )
