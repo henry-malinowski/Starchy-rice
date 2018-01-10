@@ -18,7 +18,7 @@ ZSH=/usr/share/oh-my-zsh
 
 # The following lines were added by compinstall
 zstyle :compinstall file '/home/henry/.zshrc'
-autoload -Uz compinit -d ~/.cache/zompdump-$ZSH_VERSION
+autoload -Uz compinit -d ~/.cache/zcompdump-$ZSH_VERSION
 compinit
 # End of lines added by compinstall
 
