@@ -7,15 +7,14 @@ Xft.antialias: true
 Xft.hintstyle: hintslight
 Xft.rgba: rgb
 #ifdef WIDTH 
-    /// HP Pavilion
-    #if (WIDTH == 1366)
-        Xft.dpi: 100
-    #endif
-
-    /// HP Envy
+    // HP Envy
     #if (WIDTH == 1920)
-!        Xft.dpi: 141
-! windows are too big
+        Xft.dpi: 96
+    // HP Pavilion
+    #elif (WIDTH == 1366)
+        Xft.dpi: 100
+    // fallback
+    #else
         Xft.dpi: 96
     #endif
 #else
@@ -63,24 +62,23 @@ URxvt.color7    : #B6B6B6
 URxvt.color15   : #C2C2C2
 
 !## Font selection
-
-#ifdef WIDTH 
-    /// HP Pavilion
-    #if (WIDTH == 1366)
-        URxvt.font:     xft:FiraMono-Regular Powerline:style=Regular:pixelsize=11
-        URxvt.boldFont: xft:FiraMono-Bold Powerline:style=Bold:pixelsize=11
-    #endif
-
-    /// HP Envy
+#ifdef WIDTH
+    // HP Envy
     #if (WIDTH == 1920)
-        URxvt.font:     xft:FiraMono-Regular Powerline:style=Regular:pixelsize=14
-        URxvt.boldFont: xft:FiraMono-Bold Powerline:style=Bold:pixelsize=14
+        #define URXVT_PIXELSIZE 14
+    // HP Pavilion
+    #elif (WIDTH == 1366)
+        #define URXVT_PIXELSIZE 11
+    // fallback
+    #else
+        #define URXVT_PIXELSIZE 12
     #endif
 #else
     #pragma message ( "Could not detect resolution for Font selection" )
-!    URxvt.font:     xft:FiraMono-Regular Powerline:style=Regular:pixelsize=12
-!    URxvt.boldFont: xft:FiraMono-Bold Powerline:style=Bold:pixelsize=12
 #endif
 
- 
+URxvt.font:             xft:RobotoMono-Regular:style=Regular:pixelsize=URXVT_PIXELSIZE
+URxvt.boldFont:         xft:RobotoMono-Bold:style=Bold:pixelsize=URXVT_PIXELSIZE
+URxvt.italicFont:       xft:RobotoMono-Italic:style=Italic:pixelsize=URXVT_PIXELSIZE
+URxvt.boldItalicFont:   xft:RobotoMono-BoldItalic:style=Bold Italic:pixelsize=URXVT_PIXELSIZE
 
