@@ -3,8 +3,8 @@
 ! these settings are subject to taste and that the monitor is 15.6 inches diagonally
 
 !## Xft settings / Font clarity settings
-Xft.antialias: true
-Xft.hintstyle: hintslight
+!Xft.antialias: true
+!Xft.hintstyle: hintslight
 Xft.rgba: rgb
 #ifdef WIDTH 
     // HP Envy
@@ -31,35 +31,36 @@ URxvt.skipBuiltinGlyphs: true
 !## disable scrollbar
 URxvt.scrollBar: false 
 
+
 !## Aci color scheme 
 ! foreground/background
 *background: #0d1926
 *foreground: #B4E1FD
 *cursorColor    : #D9E6F2
 ! black
-.color0    : #363636
-.color8    : #424242
+*color0    : #363636
+*color8    : #424242
 ! red
-.color1    : #FF0883
-.color9    : #FF1E8E
+*color1    : #FF0883
+*color9    : #FF1E8E
 ! green
-.color2    : #83FF08
-.color10   : #8EFF33
+*color2    : #83FF08
+*color10   : #8EFF33
 ! yellow
-.color3    : #FF8308
-.color11   : #FF8E1E
+*color3    : #FF8308
+*color11   : #FF8E1E
 ! blue
-.color4    : #0883FF
-.color12   : #1E8EFF
+*color4    : #0883FF
+*color12   : #1E8EFF
 ! magenta
-.color5    : #8308FF
-.color13   : #8E1EFF
+*color5    : #8308FF
+*color13   : #8E1EFF
 ! cyan
-.color6    : #08FF83
-.color14   : #1EFF8E
+*color6    : #08FF83
+*color14   : #1EFF8E
 ! white
-.color7    : #B6B6B6
-.color15   : #C2C2C2
+*color7    : #B6B6B6
+*color15   : #C2C2C2
 
 !## Font selection (URxvt)
 #ifdef WIDTH
