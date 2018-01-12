@@ -23,6 +23,12 @@ Xft.rgba: rgb
 #endif
 URxvt*buffered: false
 
+!## URxvt scrips
+urxvt.perl-ext-common: default,resize-font
+! requires urxvt-resize-font-git (AUR)
+URxvt.resize-font.smaller:  C-Down
+URxvt.resize-font.bigger:   C-Up
+
 !## Attempting to fix PowerLine fonts
 !URxvt.letterSpace: 1
 URxvt.utf8: true
@@ -34,9 +40,9 @@ URxvt.scrollBar: false
 
 !## Aci color scheme 
 ! foreground/background
-*background: #0d1926
-*foreground: #B4E1FD
-*cursorColor    : #D9E6F2
+*background:  #182330
+*foreground:  #B4E1FD
+*cursorColor: #B4E1FD
 ! black
 *color0    : #363636
 *color8    : #424242
