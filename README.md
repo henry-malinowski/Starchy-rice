@@ -20,6 +20,7 @@ Arch Linux / i3-gaps config files
 ### vim
 
 * vim plugins are managed by vim-plug (AUR)
+* i3 config .vim
 
 ### TODO
 
