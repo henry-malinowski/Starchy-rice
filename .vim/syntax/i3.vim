@@ -7,6 +7,10 @@ if exists("b:current_syntax")
   finish
 endif
 
+" Folding
+setlocal foldmethod=expr
+setlocal foldexpr=getline(v\:lnum)=~'^###'?'>1'\:'='
+
 " Symbols
 syn match   i3Operators "+\|→"
 syn match   i3ChainDelimiter ";"
