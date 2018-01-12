@@ -8,6 +8,7 @@ call plug#end()
 set number
 set relativenumber
 
+set nocompatible
 filetype plugin indent on
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
