@@ -24,15 +24,28 @@ Xft.rgba: rgb
 URxvt*buffered: false
 
 !## URxvt scrips
-urxvt.perl-ext-common: default,resize-font
+urxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,fullscreen,resize-font
+
 ! requires urxvt-resize-font-git (AUR)
 URxvt.resize-font.smaller:  C-Down
 URxvt.resize-font.bigger:   C-Up
 
+! requires urxvt-perls
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+
+! requires urxvt-fullscreen (AUR)
+URxvt.keysym.F11: perl:fullscreen:switch
+
+!## URxvt (buildin-bindings)
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+
 !## Attempting to fix PowerLine fonts
 !URxvt.letterSpace: 1
 URxvt.utf8: true
-URxvt.skipBuiltinGlyphs: true
+URxvt*skipBuiltinGlyphs: true
 
 !## disable scrollbar
 URxvt.scrollBar: false 
