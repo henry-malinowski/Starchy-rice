@@ -23,10 +23,11 @@ Xft.rgba: rgb
 #endif
 URxvt*buffered: false
 
-!## URxvt scrips
+!## URxvt scripts
 urxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,fullscreen,resize-font
 
 ! requires urxvt-resize-font-git (AUR)
+! readme at /usr/share/doc/urxvt-resize-font-git/README.md
 URxvt.resize-font.smaller:  C-Down
 URxvt.resize-font.bigger:   C-Up
 
@@ -36,6 +37,7 @@ URxvt.url-select.underline: true
 
 ! requires urxvt-fullscreen (AUR)
 URxvt.keysym.F11: perl:fullscreen:switch
+
 
 !## URxvt (buildin-bindings)
 URxvt.iso14755: false

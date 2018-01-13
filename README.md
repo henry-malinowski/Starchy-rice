@@ -12,8 +12,12 @@ Arch Linux / i3-gaps config files
 ### urxvt
 
 * rxvt-unicode-better-wheel-scrolling-unicode3
-* urxvt-fullscreen
-* urxvt-resize-font-git
+* urxvt-resize-font-git (AUR)
+    - Ctrl+Down (increase font size)
+    - Ctrl+Up   (decrease font size)
+* urxvt-perls
+* urxvt-fullscreen (AUR)
+    - F11 toggles fullscreen
 
 `~/.Xresources` can be symlinked `~/.Xdefaults`
 
