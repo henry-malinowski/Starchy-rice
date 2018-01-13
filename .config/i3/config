@@ -103,6 +103,15 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+###---Audio and Music Definitions---###
+#For PULSEAUDIO/PAMIXER
+set $inc     --no-startup-id pamixer --allow-boost -i 5
+set $biginc  --no-startup-id pamixer --allow-boost -i 15
+set $dec     --no-startup-id pamixer --allow-boost -d 5
+set $bigdec  --no-startup-id pamixer --allow-boost -d 15
+set $mute    --no-startup-id pamixer --allow-boost -t
+set $micmute --no-startup-id pamixer --allow-boost -t
+
 ###---Workspace Bindings---###
 # name windowing tabs
 set $ws1 "1"
