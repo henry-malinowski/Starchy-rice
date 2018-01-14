@@ -39,19 +39,16 @@ URxvt.url-select.underline: true
 URxvt.keysym.F11: perl:fullscreen:switch
 
 
-!## URxvt (buildin-bindings)
+!## URxvt (buildin settings)
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
-
-!## Attempting to fix PowerLine fonts
-!URxvt.letterSpace: 1
-URxvt.utf8: true
-URxvt*skipBuiltinGlyphs: true
-
-!## disable scrollbar
+! disable scrollbar
 URxvt.scrollBar: false 
 
+! Attempting to fix PowerLine fonts
+URxvt.utf8: true
+URxvt*skipBuiltinGlyphs: true
 
 !## Aci color scheme 
 ! foreground/background
