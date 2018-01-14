@@ -21,6 +21,7 @@ gaps outer 15
 
 ###--Starting External Scripts---###
 exec --no-startup-id feh --bg-fill /home/henry/.config/wallpaper
+exec --no-startup-id unclutter --fork
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
