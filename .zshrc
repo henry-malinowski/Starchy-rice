@@ -89,16 +89,16 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	archlinux
-	autoprp8
-	cabel
-	git
-	gradle
-	python
-	pylint
-	ruby
-	sudo
-	zsh-syntax-highlighting
+    archlinux
+    autoprp8
+    cabel
+    git
+    gradle
+    python
+    pylint
+    ruby
+    sudo
+    zsh-syntax-highlighting
 )
 
 
