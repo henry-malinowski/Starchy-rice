@@ -8,8 +8,11 @@ call plug#end()
 
 " Syntax highlighting
 syntax enable
+
+" Set up Solorized
 set background=dark
 colorscheme solarized
+call togglebg#map("<F5>")
 
 " Line numbering style (duh)
 set number
