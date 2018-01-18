@@ -2,7 +2,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
 Plug 'yuttie/comfortable-motion.vim'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'micha/vim-colors-solarized'
 call plug#end()
+
+" Syntax highlighting
+syntax enable
+set background=dark
+colorscheme solarized
 
 " Line numbering style (duh)
 set number
