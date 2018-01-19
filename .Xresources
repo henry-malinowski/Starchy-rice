@@ -30,6 +30,8 @@ urxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,fullscreen,r
 ! readme at /usr/share/doc/urxvt-resize-font-git/README.md
 URxvt.resize-font.smaller:  C-Down
 URxvt.resize-font.bigger:   C-Up
+URxvt.resize-font.reset:    C-equal
+URxvt.resize-font.show:     C-question
 
 ! requires urxvt-perls
 URxvt.url-select.launcher: /usr/bin/xdg-open
