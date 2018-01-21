@@ -13,6 +13,7 @@ If a theme is not loaded both bash and zsh have matching PS1 prompts.
 
 * [zsh](https://www.archlinux.org/packages/extra/x86_64/zsh/)
 * [zsh-syntax-highlighting](https://www.archlinux.org/packages/community/any/zsh-syntax-highlighting/)
+* [zsh-dircolors-solarized-git](https://aur.archlinux.org/packages/zsh-dircolors-solarized-git/)
 * [oh-my-zsh](https://aur.archlinux.org/packages/oh-my-zsh-git/)
 * [Generic Colouriser](https://aur.archlinux.org/packages/grc/)
 

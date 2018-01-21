@@ -98,7 +98,8 @@ plugins=(
     pylint
     ruby
     sudo
-    zsh-syntax-highlighting
+#    zsh-syntax-highlighting
+#    zsh-dircolors-solarized
 )
 
 
@@ -138,6 +139,10 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-dircolors-solarized/zsh-dircolors-solarized.zsh
+
+# loading zsh-dircolors-solarized
+#[[ -s "/usr/share/zsh/plugins/zsh-dircolors-solarized/zsh-dircolors-solarized.zsh" ]] && source /usr/share/zsh/plugins/zsh-dircolors-solarized/zsh-dircolors-solarized.zsh
 
 # Loading generic colouriser
 [[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
