@@ -2,7 +2,7 @@
 export VISUAL="vim"
 export EDITOR="$VISUAL"
 
-alias cats='highlight --out-format=ansi --tab=4'
+alias cats='highlight --style=solarized-dark  --out-format=ansi --tab=4'
 alias ls='ls -lhN --color --group-directories-first'
 
 # set cool PS1 if we're in bash
@@ -24,5 +24,5 @@ alias lock_wlaw='i3lock-fancy \
     Texas Penal Code, Title 7, Chapter 33 - Offenses Against Property (Computer Crimes)\n\n \
     Violators will be prosecuted"'
 
-# invoke the above command and wait 5 seconds before requesting to sleep
+# invoke the above command and wait 3.5 seconds before requesting to sleep
 alias sleep_lock='lock_wlaw & sleep 3.5 && systemctl suspend'
