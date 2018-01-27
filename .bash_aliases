@@ -4,6 +4,7 @@ export EDITOR="$VISUAL"
 
 alias cats='highlight --style=solarized-dark  --out-format=ansi --tab=4'
 alias ls='ls -lhN --color --group-directories-first'
+alias sudovim='sudo -E vim'
 
 # set cool PS1 if we're in bash
 if [ -n "$BASH" ] ; then
