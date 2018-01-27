@@ -90,16 +90,10 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     archlinux
-    autoprp8
-    cabel
-    git
     gradle
     python
     pylint
-    ruby
     sudo
-#    zsh-syntax-highlighting
-#    zsh-dircolors-solarized
 )
 
 
