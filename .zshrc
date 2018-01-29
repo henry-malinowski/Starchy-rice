@@ -94,6 +94,7 @@ plugins=(
     python
     pylint
     sudo
+    colored-man-pages
 )
 
 
