@@ -13,7 +13,7 @@ fi
 
 # set cool 'PS1' if we're in zsh and no theme is set
 if [ -z "$ZSH_THEME" ]; then
-    PROMPT="%B%F{magenta}[%b%F{red}%n%B%F{yellow}@%b%F{green}%m %F{blue}%1~%B%F{magenta}] %B%F{red}>%f%b "
+    PROMPT="%F{magenta}[%F{red}%n%F{yellow}@%F{green}%m %F{blue}%1~%F{magenta}] %F{red}>%f "
 fi
 
 alias ka_urxvt='xrdb -merge ~/.Xdefaults && killall urxvt'
@@ -26,4 +26,4 @@ alias lock_wlaw='i3lock-fancy \
     Violators will be prosecuted"'
 
 # invoke the above command and wait 3.5 seconds before requesting to sleep
-alias sleep_lock='lock_wlaw & sleep 3.5 && systemctl suspend'
+alias lock_suspend='lock_wlaw & sleep 3.5 && systemctl suspend'
