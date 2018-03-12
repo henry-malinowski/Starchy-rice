@@ -1,6 +1,8 @@
 #!/bin/bash
 #vim: ft=zsh
 export LANG=en_US.UTF-8
+#export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=4 nomod nolist noma' -\""
+export MANPAGER="nvim +set\ filetype=man -"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -34,7 +36,6 @@ function _pip_completion {
 compctl -K _pip_completion pip
 # pip zsh completion end
 
-# Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="blinks"
