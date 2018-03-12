@@ -13,10 +13,21 @@
 If a theme is not loaded both bash and zsh have matching PS1 prompts.
 
 * [zsh](https://www.archlinux.org/packages/extra/x86_64/zsh/)
+* [zsh-completions](https://www.archlinux.org/packages/community/any/zsh-completions/)
 * [zsh-syntax-highlighting (AUR)](https://www.archlinux.org/packages/community/any/zsh-syntax-highlighting/)
 * [zsh-dircolors-solarized-git (AUR)](https://aur.archlinux.org/packages/zsh-dircolors-solarized-git/)
 * [oh-my-zsh (AUR)](https://aur.archlinux.org/packages/oh-my-zsh-git/)
 * [Generic Colouriser (AUR)](https://aur.archlinux.org/packages/grc/)
+
+Once installed...
+
+```sh
+# from inside the repo
+stow zsh
+chsh $USER --shell /bin/zsh
+# enter password
+# restart shell
+```
 
 ---
 
