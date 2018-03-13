@@ -48,14 +48,20 @@ chsh $USER --shell /bin/zsh
 
 ### vim
 
-* vim-gnome for access to the system clipboard
+* [vim-gnome (AUR)](https://aur.archlinux.org/packages/vim-gnome/) for access to the system clipboard
 * vim plugins are managed by [vim-plug (AUR)](https://aur.archlinux.org/packages/vim-plug/)
 * i3 config .vim is included with code folding if a line starts with 3 pound `#` signs.
+* DOSini code folding .vim for polybar config.
 
 ---
 
 ### pacman
-* I don't recommend using stow for managing these because this would result in a symlink to a user folder that may be deleted later. Copy the files instead after reading them.
+I don't recommend using stow for managing these because this would result in a symlink to a user folder that may be deleted later. Copy the files instead after reading them.
+
+* [reflector](https://www.archlinux.org/packages/community/any/reflector/) updates the [pacman mirrorlist](
+https://www.archlinux.org/packages/core/any/pacman-mirrorlist/) everytime the mirrorlist is installed.
+* cached versions of packages are deleted when a package is uninstalled
+* only the last 3 versions of packages are retained
 
 ---
 
