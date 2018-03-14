@@ -42,7 +42,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 #exec_always --no-startup-id urxvtd -o --fork
 
 # start NetworkManager applet. Somestimes the GUI is easier
-exec --no-startup-id exec nm-applet
+exec --no-startup-id exec nm-applet --no-agent
 
 # Compositer (should help fix tearing) May conflict with startx / .xinitrc
 exec --no-startup-id compton --xrender-sync-fence
