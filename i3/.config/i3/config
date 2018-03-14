@@ -71,7 +71,6 @@ bindsym $mod+Shift+BackSpace exec systemctl reboot
 
 #bindsym $mod+grave
 
-###---Letter Key Bindings---###
 bindsym $mod+q       kill
 bindsym $mod+Shift+q kill
 
@@ -80,10 +79,6 @@ bindsym $mod+Shift+w exec --no-startup-id $BROWSER
 
 bindsym $mod+c       exec --no-startup-id $CHROME
 bindsym $mod+Shift+c exec --no-startup-id $CHROME --incognito
-
-# start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show run
-#bindsym $mod+Shift+d
 
 bindsym $mod+f fullscreen toggle
 #bindsym $mod+Shift+f
@@ -120,6 +115,15 @@ bindsym $mod+Shift+l move right 30
 
 bindsym $mod+z		 gaps outer current plus 5
 bindsym $mod+Shift+z gaps outer current minus 5
+
+bindsym $mod+d       exec --no-startup-id rofi        \
+                        -combi-modi window#drun#ssh   \
+                        -theme solarized              \
+                        -font "RobotoMono-Regular 14" \
+                        -lines 6                      \
+                        -fake-transparency true       \
+                        -opacity 50                   \
+                        -show run
 
 ###---Audio and Music Definitions---###
 # For mpc:
