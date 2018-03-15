@@ -193,6 +193,14 @@ for_window [title="Screen Layout Editor"] floating enable
 for_window [title="Screen Layout Editor"] resize set 650 450
 for_window [title="Screen Layout Editor"] move position center
 
+# NetworkManager connection editor
+for_window [title="Network Connections"] floating enable
+for_window [title="Network Connections"] resize set 650 450
+for_window [title="Network Connections"] move position center
+
+# PAvolume control
+for_window [title="Volume Control"] floating enable
+
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
