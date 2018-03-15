@@ -24,7 +24,7 @@ Xft.rgba: rgb
 URxvt*buffered: false
 
 !## URxvt scripts
-urxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,fullscreen,resize-font
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,fullscreen,resize-font,theme-switch
 
 ! requires urxvt-resize-font-git (AUR)
 ! readme at /usr/share/doc/urxvt-resize-font-git/README.md
@@ -40,8 +40,16 @@ URxvt.url-select.underline: true
 ! requires urxvt-fullscreen (AUR)
 URxvt.keysym.F11: perl:fullscreen:switch
 
+! requires urxvt-theme-switch-git (AUR coming soon) - consider forking, the original dev was kindof an idiot
+URxvt.color-themes.themedir: /home/henry/.config/urxvt/themes
+URxvt.color-themes.preprocessor: /usr/bin/cpp
+URxvt.keysym.S-Up:   perl:color-themes:next
+URxvt.keysym.S-Down: perl:color-themes:prev
 
 !## URxvt (buildin settings)
+! define meta key explicitly
+URxvt.modifier: alt
+
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
@@ -166,8 +174,16 @@ URxvt*skipBuiltinGlyphs: true
     #pragma message ( "Could not detect resolution for Font selection (URxvt)" )
 #endif
 
-URxvt.font:             xft:RobotoMono-Regular:style=Regular:pixelsize=URXVT_PIXELSIZE
+URxvt.font:             xft:RobotoMono-Regular:style=Regular:pixelsize=URXVT_PIXELSIZE,xft:Unifont:style=Regular:pixelsize=URXVT_PIXELSIZE,xft:FontAwesome:pixelsize=URXVT_PIXELSIZE,xft:MaterialIcons:style=Regulate:pixelsize=URXVT_PIXELSIZE,xft:Wuncon Sigi:pixelsize=URXVT_PIXELSIZ,xft:FontAwesome:pixelsize=URXVT_PIXELSIZEE
 URxvt.boldFont:         xft:RobotoMono-Bold:style=Bold:pixelsize=URXVT_PIXELSIZE
 URxvt.italicFont:       xft:RobotoMono-Italic:style=Italic:pixelsize=URXVT_PIXELSIZE
 URxvt.boldItalicFont:   xft:RobotoMono-BoldItalic:style=Bold Italic:pixelsize=URXVT_PIXELSIZE
 
+!## Rofi configuration
+!rofi.combi-modi: window,drun,ssh
+!rofi.theme: solarized
+!rofi.modi: combi
+!rofi.font: RobotoMono-Regular URXVT_PIXELSIZE
+!rofi.lines: 6
+!rofi.fake-transparency: true
+!rofi.opacity: "50"
