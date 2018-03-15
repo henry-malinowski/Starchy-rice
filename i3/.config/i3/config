@@ -201,6 +201,11 @@ for_window [title="Network Connections"] move position center
 # PAvolume control
 for_window [title="Volume Control"] floating enable
 
+# lxapprearance
+for_window [title="Customize Look and Feel"] floating enable
+for_window [title="Customize Look and Feel"] resize set 800 600
+for_window [title="Customize Look and Feel"] move position center
+
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
