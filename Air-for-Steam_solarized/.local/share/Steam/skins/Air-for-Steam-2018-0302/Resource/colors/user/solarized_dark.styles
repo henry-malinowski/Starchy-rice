@@ -1,0 +1,16 @@
+resource/colors/solarized_dark.styles {
+
+  colors {
+    Focus="0 43 54 255"        //
+
+    Focus2="131 148 150 255"  //for text
+
+    Focus3="7 54 66 255"      //
+
+    Focus4="147 161 161 129"     //Focus3 transparent for details box
+
+    A2TextFocus="Focus2"      //
+
+    A2TextFocusHover="Focus2" //
+  }
+}
