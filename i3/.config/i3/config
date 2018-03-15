@@ -23,7 +23,7 @@ gaps outer 0
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # since window titles are disabled this option doesn't matter
-font pango:monospace 8
+font pango:Roboto-Medium 8
 
 ###--Starting External Scripts---###
 # start mpd (polybar will also complain is it isn't loaded first)
@@ -188,6 +188,11 @@ for_window [class="Gimp"] move workspace $ws5
 for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 50 px or 50ppt
 for_window [window_role="gimp-toolbox"] floating disable; move right; resize grow width 20 px or 20ppt
 
+# arandr floating/center
+for_window [title="Screen Layout Editor"] floating enable
+for_window [title="Screen Layout Editor"] resize set 650 450
+for_window [title="Screen Layout Editor"] move position center
+
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -263,3 +268,6 @@ bindsym XF86MonBrightnessUp     exec --no-startup-id xbacklight -inc 10
 bindsym XF86AudioPrev           exec $prev
 bindsym XF86AudioNext           exec $next
 bindsym XF86AudioPause          exec $pause
+
+bindsym XF86Display             exec --no-startup-id arandr
+
