@@ -1,5 +1,4 @@
 #!/bin/bash
-[ -r ~/.bash_profile ] && source ~/.bash_profile
 
 export VISUAL="vim"
 export EDITOR="$VISUAL"
