@@ -1,5 +1,6 @@
 vim/.vim/plugged
 vim/.vim/swapped
+*.swp
 
 mpd/.config/mpd/**
 !/mpd/.config/mpd/mpd.conf
