@@ -7,6 +7,10 @@ killall -q polybar
 # Wait until the processes have been shut down
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
+# since we use NetworkManager let's use it to snag our network interfaces in a platform agnostic fashon
+export NM_ETHERNET_INTERFACE=$(nmcli device show | grep ethernet -B 1 | awk 'NR==1{print $2}')
+export NM_WIFI_INTERFACE=$(nmcli device show | grep wifi -B 1 | awk 'NR==1{print $2}')
+
 # deal with XRandR monitor name randomization
 #MONITOR=$(polybar -m|tail -1|sed -e 's/:.*$//g')
 

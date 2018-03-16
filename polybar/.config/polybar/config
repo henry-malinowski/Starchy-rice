@@ -54,7 +54,7 @@ font-2 = Symbols Nerd Font:size=9;1.5
 
 modules-left = i3 mpd
 modules-center = date
-modules-right = backlight-acpi pulseaudio xkeyboard memory cpu eth-eno1 eth-enp8s0 battery temperature powermenu
+modules-right = backlight-acpi pulseaudio xkeyboard memory cpu nm-ethernet battery temperature powermenu
 tray-position = right
 tray-padding = 2
 
@@ -263,10 +263,32 @@ ramp-signal-4 = 😃
 ramp-signal-5 = 😈
 ramp-signal-foreground = ${colors.foreground-alt}
 
-[module/eth-eno1]
+[module/nm-wifi]
 type = internal/network
-interface = eno1
-interval = 5.0
+interface = ${env:NM_WIFI_INTERFACE}
+interval = 5
+
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline = ${xrdb:color9}
+label-connected = %essid%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+ramp-signal-0 = 😱
+ramp-signal-1 = 😠
+ramp-signal-2 = 😒
+ramp-signal-3 = 😊
+ramp-signal-4 = 😃
+ramp-signal-5 = 😈
+ramp-signal-foreground = ${colors.foreground-alt}
+
+[module/nm-ethernet]
+type = internal/network
+interface = ${env:NM_ETHERNET_INTERFACE}
+interval = 5
 label-font = 2
 
 format-connected-underline = ${xrdb:color2}
@@ -275,10 +297,6 @@ format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
 format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/eth-enp8s0]
 type = internal/network
