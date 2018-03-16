@@ -12,7 +12,7 @@ export NM_ETHERNET_INTERFACE=$(nmcli device show | grep ethernet -B 1 | awk 'NR=
 export NM_WIFI_INTERFACE=$(nmcli device show | grep wifi -B 1 | awk 'NR==1{print $2}')
 
 # deal with XRandR monitor name randomization
-#MONITOR=$(polybar -m|tail -1|sed -e 's/:.*$//g')
+MONITOR=$(polybar -m|tail -1|sed -e 's/:.*$//g')
 
 # Launch bar1 and bar2
 #polybar example &

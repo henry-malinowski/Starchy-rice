@@ -20,7 +20,7 @@ secondary = ${xrdb:color5}
 alert = #bd2c40
 
 [bar/example]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 27
 ;offset-x = 1%
@@ -44,13 +44,13 @@ module-margin-left = 1
 module-margin-right = 2
 
 ;font-0 = fixed:pixelsize=10;1
-;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
 ;font-2 = siji:pixelsize=10;1
 font-0 = Roboto-Medium:fontformat=truetype:antialias=true:size=9
 font-1 = MaterialIcons:size=12;2
 ;font-2 = Weather Icons:size=12;1
-;font-2 = Wuncon Siji:pixelsize=10
 font-2 = Symbols Nerd Font:size=9;1.5
+;font-3 = Wuncon Siji:pixelsize=10
 
 modules-left = i3 mpd
 modules-center = date
@@ -282,7 +282,6 @@ ramp-signal-1 = 😠
 ramp-signal-2 = 😒
 ramp-signal-3 = 😊
 ramp-signal-4 = 😃
-ramp-signal-5 = 😈
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/nm-ethernet]
@@ -297,23 +296,6 @@ format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
 format-disconnected =
-
-[module/eth-enp8s0]
-type = internal/network
-interface = enp8s0
-interval = 5.0
-label-font = 2
-
-format-connected-underline = ${xrdb:color2}
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
 type = internal/date
