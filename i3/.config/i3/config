@@ -183,6 +183,7 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+###---Floating window settings---###
 for_window [title="GIMP Startup"] move workspace $ws5
 for_window [class="Gimp"] move workspace $ws5
 for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 50 px or 50ppt
@@ -205,6 +206,12 @@ for_window [title="Volume Control"] floating enable
 for_window [title="Customize Look and Feel"] floating enable
 for_window [title="Customize Look and Feel"] resize set 800 600
 for_window [title="Customize Look and Feel"] move position center
+
+# Razor keyboard control thingy
+for_window [title="Polychromatic Controller"] floating enable
+for_window [title="Polychromatic Controller"] resize set 875 600
+for_window [title="Polychromatic Controller"] move position center
+
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
