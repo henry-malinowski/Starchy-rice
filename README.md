@@ -1,11 +1,45 @@
 # Starchy-rice
 ### i3-wm
 
-* i3-gaps
-* i3-blocks
-* i3lock
-* i3-status
-* j4-dmenu-desktop
+i3-gaps-next-git
+
+* [mpd](https://www.archlinux.org/packages/extra/x86_64/mpd/), [libmpdclient](https://www.archlinux.org/packages/extra/x86_64/libmpdclient/), [mpc](https://www.archlinux.org/packages/extra/x86_64/mpc/) 
+
+* [feh](https://www.archlinux.org/packages/extra/x86_64/feh/) for setting the wallpaper
+
+* [unclutter (AUR)](https://aur.archlinux.org/packages/unclutter-xfixes-git/) for hiding the mouse cursor
+
+* [network-manager-applet](https://www.archlinux.org/packages/extra/x86_64/network-manager-applet/)
+
+* thunar (file manager)
+
+  * [gvfs](https://www.archlinux.org/packages/extra/x86_64/gvfs/) (trash support and mounting)
+
+  * thunar-archive-plugin
+
+  * thunar-media-tags-plugin
+
+  * thunar-volman
+
+  * tumbler
+
+    install command `pacman -S thunar thunar-{archive-plugin,media-tags-plugin,volman} tumbler gvfs gvfs-{afc,gphoto2,mtp,nfs}`
+
+* [rofi](https://www.archlinux.org/packages/community/x86_64/rofi/) (program launcher)
+
+* [compton](https://www.archlinux.org/packages/community/x86_64/compton/)
+
+  * Compton is not configured just turned on
+
+* suckless terminal (st)
+
+* [polybar](https://aur.archlinux.org/packages/polybar-git)
+
+  * mpd hook
+  * fonts
+    * [ttf-nerd-fonts-symbols (AUR)](https://aur.archlinux.org/packages/ttf-nerd-fonts-symbols/)
+    * [ttf-material-icons (AUR)](https://aur.archlinux.org/packages/ttf-material-icons/) install manually
+    * [ttf-google-fonts-git (AUR)](https://aur.archlinux.org/packages/ttf-google-fonts-git/) OR [ttf-roboto](https://www.archlinux.org/packages/community/any/ttf-roboto/)
 
 ---
 
@@ -48,10 +82,16 @@ chsh $USER --shell /bin/zsh
 
 ### vim
 
-* [vim-gnome (AUR)](https://aur.archlinux.org/packages/vim-gnome/) for access to the system clipboard
-* vim plugins are managed by [vim-plug (AUR)](https://aur.archlinux.org/packages/vim-plug/)
+* [vim-git (AUR)](https://aur.archlinux.org/packages/vim-git/) for access to the system clipboard.
+* vim plugins are managed by [vim-plug (AUR)](https://aur.archlinux.org/packages/vim-plug/).
+  
+    * Install plugins by opening `vim ~/.vimrc`
+    * :source %
+    * :PlugInstall
+
 * i3 config .vim is included with code folding if a line starts with 3 pound `#` signs.
 * DOSini code folding .vim for polybar config.
+
 
 ---
 
