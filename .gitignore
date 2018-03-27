@@ -1,6 +1,7 @@
 vim/.vim/plugged
 vim/.vim/swapped
 *.swp
+*.netrwhist
 
 mpd/.config/mpd/**
 !/mpd/.config/mpd/mpd.conf
