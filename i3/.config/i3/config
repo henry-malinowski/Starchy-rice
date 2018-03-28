@@ -10,7 +10,7 @@
 
 ###--Basic Definitions---###
 set $mod Mod4
-set $term alacritty
+set $term st
 set $BROWSER qutebrowser
 set $CHROME google-chrome-stable
 
