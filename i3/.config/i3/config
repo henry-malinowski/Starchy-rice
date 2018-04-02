@@ -35,6 +35,9 @@ exec_always --no-startup-id feh --bg-fill /home/henry/.config/wallpaper
 # Hide the mouse cursor when we are not using it for 5 seconds
 exec --no-startup-id unclutter --timeout 5 --fork
 
+# Lets add the Russian keyboard layout to help with homework
+exec --no-startup-id setxkbmap -layout us -variant altgr-intl -layout ru grp:caps_toggle
+
 #Launch Polybar using its startup script
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
@@ -46,9 +49,6 @@ exec --no-startup-id exec nm-applet --no-agent
 
 # Compositer (should help fix tearing) May conflict with startx / .xinitrc
 exec --no-startup-id compton --xrender-sync-fence
-
-# Lets add the Russian keyboard layout to help with homework
-exec --no-startup-id setxkbmap -layout us,ru 
 
 # thunar (filemanager) can run as a daemon - let's do that
 exec --no-startup-id thunar --daemon
@@ -116,14 +116,15 @@ bindsym $mod+Shift+l move right 30
 bindsym $mod+z		 gaps outer current plus 5
 bindsym $mod+Shift+z gaps outer current minus 5
 
-bindsym $mod+d       exec --no-startup-id rofi        \
-                        -combi-modi window#drun#ssh   \
-                        -theme solarized              \
-                        -font "RobotoMono-Regular 14" \
-                        -lines 6                      \
-                        -fake-transparency true       \
-                        -opacity 50                   \
-                        -show run
+bindsym $mod+d       exec --no-startup-id rofi -show combi
+#bindsym $mod+d       exec --nostartup-id rofi          \
+#                        -combi-modi drun#windows#ssh  \
+#                        -theme solarized_alternate    \
+#                        -font "RobotoMono-Regular 14" \
+#                        -lines 8                      \
+#                        -fake-transparency false      \
+#                        -opacity 50                   \
+#                        -show combi
 
 ###---Audio and Music Definitions---###
 # For mpc:
