@@ -1,0 +1,69 @@
+configuration {
+/*	modi: "window,drun,ssh";*/
+	width: 40;
+	lines: 8;
+/*	columns: 1;*/
+	font: "RobotoMono-Regular 14";
+/*	bw: 1;*/
+/*	location: 0;*/
+	padding: 10;
+/*	yoffset: 0;*/
+/*	xoffset: 0;*/
+/*	fixed-num-lines: true;*/
+	show-icons: true;
+    terminal: "st";
+/*	ssh-client: "ssh";*/
+/*	ssh-command: "{terminal} -e {ssh-client} {host}";*/
+/*	run-command: "{cmd}";*/
+/*	run-list-command: "";*/
+/*	run-shell-command: "{terminal} -e {cmd}";*/
+/*	window-command: "xkill -id {window}";*/
+/*	window-match-fields: "all";*/
+/*	drun-icon-theme: ;*/
+/*	drun-match-fields: "name,generic,exec,categories";*/
+/*	disable-history: false;*/
+/*	sort: false;*/
+/*	levenshtein-sort: false;*/
+/*	case-sensitive: false;*/
+/*	cycle: true;*/
+/*	sidebar-mode: false;*/
+/*	eh: 1;*/
+/*	auto-select: false;*/
+/*	parse-hosts: false;*/
+/*	parse-known-hosts: true;*/
+	combi-modi: "window#drun#ssh";
+/*	matching: "normal";*/
+/*	tokenize: true;*/
+/*	m: "-5";*/
+/*	line-margin: 2;*/
+/*	line-padding: 1;*/
+/*	filter: ;*/
+/*	separator-style: "dash";*/
+	hide-scrollbar: true;
+/*	fullscreen: false;*/
+/*	fake-transparency: true;*/
+/*	dpi: -1;*/
+/*	threads: 0;*/
+/*  scrollbar-width: 0;*/
+/*	scroll-method: 0;*/
+/*	fake-background: "screenshot";*/
+/*	window-format: "{w}    {i}{c}   {t}";*/
+/*	click-to-exit: true;*/
+/*	show-match: true;*/
+	theme: "solarized_alternate";
+/*	color-normal: ;*/
+/*	color-urgent: ;*/
+/*	color-active: ;*/
+/*	color-window: ;*/
+/*	max-history-size: 25;*/
+	combi-hide-mode-prefix: true;
+/*	pid: "/run/user/1000/rofi.pid";*/
+/*	display-window: ;*/
+/*	display-windowcd: ;*/
+/*	display-run: ;*/
+/*	display-ssh: ;*/
+/*	display-drun: ;*/
+/*	display-combi: ;*/
+/*	display-keys: ;*/
+    drun-icon-theme: "Papirus-Dark";
+}
