@@ -179,11 +179,4 @@ URxvt.boldFont:         xft:RobotoMono-Bold:style=Bold:pixelsize=URXVT_PIXELSIZE
 URxvt.italicFont:       xft:RobotoMono-Italic:style=Italic:pixelsize=URXVT_PIXELSIZE
 URxvt.boldItalicFont:   xft:RobotoMono-BoldItalic:style=Bold Italic:pixelsize=URXVT_PIXELSIZE
 
-!## Rofi configuration
-!rofi.combi-modi: window,drun,ssh
-!rofi.theme: solarized
-!rofi.modi: combi
-!rofi.font: RobotoMono-Regular URXVT_PIXELSIZE
-!rofi.lines: 6
-!rofi.fake-transparency: true
-!rofi.opacity: "50"
+
