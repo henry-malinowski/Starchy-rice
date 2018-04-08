@@ -12,7 +12,7 @@
 set $mod Mod4
 set $term st
 set $BROWSER qutebrowser
-set $CHROME google-chrome-stable
+set $CHROME chromium
 
 ## Needed for i3-gaps
 hide_edge_borders both
@@ -36,7 +36,7 @@ exec_always --no-startup-id feh --bg-fill /home/henry/.config/wallpaper
 exec --no-startup-id unclutter --timeout 5 --fork
 
 # Lets add the Russian keyboard layout to help with homework
-exec --no-startup-id setxkbmap -layout us -variant altgr-intl -layout ru grp:caps_toggle
+exec --no-startup-id setxkbmap -layout us,ru
 
 #Launch Polybar using its startup script
 exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -117,14 +117,7 @@ bindsym $mod+z		 gaps outer current plus 5
 bindsym $mod+Shift+z gaps outer current minus 5
 
 bindsym $mod+d       exec --no-startup-id rofi -show combi
-#bindsym $mod+d       exec --nostartup-id rofi          \
-#                        -combi-modi drun#windows#ssh  \
-#                        -theme solarized_alternate    \
-#                        -font "RobotoMono-Regular 14" \
-#                        -lines 8                      \
-#                        -fake-transparency false      \
-#                        -opacity 50                   \
-#                        -show combi
+
 
 ###---Audio and Music Definitions---###
 # For mpc:
