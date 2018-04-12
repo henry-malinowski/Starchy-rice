@@ -31,7 +31,7 @@ i3-gaps-next-git
 
   * Compton is not configured just turned on
 
-* suckless terminal (st)
+* [suckless terminal (st)](https://github.com/LukeSmithxyz/st)
 
 * [polybar](https://aur.archlinux.org/packages/polybar-git)
 
@@ -107,5 +107,7 @@ https://www.archlinux.org/packages/core/any/pacman-mirrorlist/) everytime the mi
 
 ### TODO
 
+* Separate zsh installation from bash installation
+* Make zsh installation more friendly to non-Arch systems (e.g. Debian, openSUSE)
 * Migration to [GNU Stow](https://www.gnu.org/software/stow/) possibly augmented to warn about configuration dependencies.
 
