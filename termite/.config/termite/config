@@ -2,7 +2,7 @@
 allow_bold = false
 #audible_bell = false
 #dynamic_title = true
-font = RobotoMono 11
+font = Unifont 12
 #fullscreen = true
 #geometry = 640x480
 #icon_name = terminal
