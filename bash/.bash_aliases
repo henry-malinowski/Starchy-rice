@@ -18,13 +18,6 @@ if [ -z "$ZSH_THEME" ]; then
 fi
 
 alias ka_urxvt='xrdb -merge ~/.Xdefaults && killall urxvt'
-alias lock_wlaw='i3lock-fancy \
-    --font "Noto-Serif-Display-Italic" \
-    --text "Entry into this system without prior expressed permission is in violation of state and federal law.\n\n \
-    
-    United States Code, Title 18 § 1030 - Computer Fraud and Abuse Act\n \
-    Texas Penal Code, Title 7, Chapter 33 - Offenses Against Property (Computer Crimes)\n\n \
-    Violators will be prosecuted"'
+alias lock_wlaw='sh ~/.config/i3/script_lock.sh'
+alias lock_suspend='sh ~/.config/i3/script_lock_suspend.sh'
 
-# invoke the above command and wait 3.5 seconds before requesting to sleep
-alias lock_suspend='lock_wlaw & sleep 3.5 && systemctl suspend'
