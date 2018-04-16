@@ -9,6 +9,8 @@ i3-gaps-next-git
 
 * [unclutter (AUR)](https://aur.archlinux.org/packages/unclutter-xfixes-git/) for hiding the mouse cursor
 
+* [numlockx](https://wiki.archlinux.org/index.php/Activating_Numlock_on_Bootup#startx) for enabling numlock once X.Org starts.
+
 * [network-manager-applet](https://www.archlinux.org/packages/extra/x86_64/network-manager-applet/)
 
 * thunar (file manager)
