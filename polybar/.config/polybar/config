@@ -445,9 +445,8 @@ menu-0-0 = reboot
 menu-0-0-exec = menu-open-1
 menu-0-1 = power off
 menu-0-1-exec = menu-open-2
-;menu-0-2 = lock
-;menu-0-2-exec = i3lock-fancy --font "Noto-Serif-Display-Italic" --text "Entry into this system without prior expressed permission is in violation of state and federal law.\n\n
-    United States Code, Title 18 § 1030 - Computer Fraud and Abuse Act\nTexas Penal Code, Title 7, Chapter 33 - Offenses Against Property (Computer Crimes)\n\n Violators will be prosecuted"
+menu-0-2 = lock
+menu-0-2-exec = sh ~/.config/i3/script_lock.sh
 
 menu-1-0 = cancel
 menu-1-0-exec = menu-open-0
