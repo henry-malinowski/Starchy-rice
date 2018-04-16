@@ -26,6 +26,9 @@ gaps outer 0
 font pango:Roboto-Medium 8
 
 ###--Starting External Scripts---###
+# enable numlock because all my current systems have a numpad
+exec --no-startup-id numlockx
+
 # start mpd (polybar will also complain is it isn't loaded first)
 exec --no-startup-id mpd
 
@@ -70,6 +73,8 @@ bindsym $mod+BackSpace       exec --no-startup-id sh ~/.config/i3/script_lock.sh
 bindsym $mod+Shift+BackSpace exec --no-startup-id sh ~/.config/i3/script_lock_suspend.sh
 
 #bindsym $mod+grave
+bindsym $mod+Delete             exec --no-startup-id xset dpms force off
+#bindsym $mod+Shift+Delete
 
 bindsym $mod+q       kill
 bindsym $mod+Shift+q kill
@@ -262,4 +267,3 @@ bindsym XF86AudioNext           exec $next
 bindsym XF86AudioPause          exec $pause
 
 bindsym XF86Display             exec --no-startup-id arandr
-
