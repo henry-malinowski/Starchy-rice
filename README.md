@@ -110,6 +110,6 @@ https://www.archlinux.org/packages/core/any/pacman-mirrorlist/) everytime the mi
 ### TODO
 
 * Separate zsh installation from bash installation
-* Make zsh installation more friendly to non-Arch systems (e.g. Debian, openSUSE)
+* Make zsh installation more friendly to non-Arch systems (e.g. Debian, openSUSE, VoidLinux, Gentoo, RHEL)
 * Migration to [GNU Stow](https://www.gnu.org/software/stow/) possibly augmented to warn about configuration dependencies.
 
