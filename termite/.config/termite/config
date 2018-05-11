@@ -68,49 +68,6 @@ color13 = #6c71c4
 color14 = #93a1a1
 color15 = #fdf6e3
 
-# Aci color scheme
-#[colors]
-## If both of these are unset, cursor falls back to the foreground color,
-## and cursor_foreground falls back to the background color.
-#cursor = #b4e1fd
-##cursor_foreground = #dcdccc
-#
-#foreground = #b4e1fd
-##foreground_bold = #ffffff
-#background = #182330
-#
-## 20% background transparency (requires a compositor)
-##background = rgba(63, 63, 63, 0.8)
-#
-## If unset, will reverse foreground and background
-##highlight = #2f2f2f
-#
-### Colors from color0 to color254 can be set
-## black   bold black
-#color0  = #363636
-#color8  = #424242
-## red     bold red
-#color1  = #FF0883
-#color9  = #FF1E8E
-## green   bold green
-#color2  = #83FF08
-#color10 = #8EFF33
-## yellow  bold yellow
-#color3  = #FF8308
-#color11 = #FF8E1E
-## blue    bold blue
-#color4  = #0883FF
-#color12 = #1E8EFF
-## magent  blod magenta
-#color5  = #8308FF
-#color13 = #8E1EFF
-## cyan    bold cyan
-#color6  = #08FF83
-#color14 = #1EFF8E
-## white   bold white
-#color7  = #B6B6B6
-#color15 = #C2C2C2
-
 [hints]
 #font = Monospace 12
 #foreground = #dcdccc
