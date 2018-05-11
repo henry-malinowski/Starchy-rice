@@ -172,7 +172,7 @@ icon-next = 
 ;    %title%
 ;  Default: %artist% - %title%
 ; label-song = 𝄞 %artist% - %title%
-label-song-maxlen = 32
+label-song-maxlen = 40
 label-song-ellipsis = true
 
 ; Only applies if <bar-progress> is used
