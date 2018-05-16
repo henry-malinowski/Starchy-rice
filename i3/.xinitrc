@@ -4,6 +4,3 @@ if [ -f ~/.Xresources ]; then
 fi
 
 exec i3
-
-# If we've configured compton, load it as a daemon
-# [[ -f ~/.config/compton.conf ]] && compton --config ~/.config/compton.conf -b
