@@ -1,0 +1,27 @@
+#!/usr/bin/zsh
+
+antigen use oh-my-zsh
+
+antigen bundle sudo
+
+#bugged right now
+#joel-porquet/zsh-dircolors-solarized
+
+antigen bundles <<EOBUNDLES
+    zsh-users/zsh-completions
+    zdharma/fast-syntax-highlighting
+    zsh-users/zsh-history-substring-search
+EOBUNDLES
+
+if [[ $CURRENT_OS == 'Linux' ]]; then
+    if [[ $DISTO == 'Gentoo' ]]; then;
+        antigen bundle gentoo/gentoo-zsh-completions
+    fi
+fi
+antigen apply
+
+# zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+#vim: ft=zsh

@@ -33,7 +33,7 @@ i3-gaps-next-git
 
   * Compton is not configured just turned on
 
-* [suckless terminal (st)](https://github.com/LukeSmithxyz/st)
+* [termite](https://wiki.archlinux.org/index.php/Termite)
 
 * [polybar](https://aur.archlinux.org/packages/polybar-git)
 
@@ -49,18 +49,18 @@ i3-gaps-next-git
 If a theme is not loaded both bash and zsh have matching PS1 prompts.
 
 * [zsh](https://www.archlinux.org/packages/extra/x86_64/zsh/)
-* [zsh-completions](https://www.archlinux.org/packages/community/any/zsh-completions/)
-* [zsh-syntax-highlighting (AUR)](https://www.archlinux.org/packages/community/any/zsh-syntax-highlighting/)
-* [zsh-dircolors-solarized-git (AUR)](https://aur.archlinux.org/packages/zsh-dircolors-solarized-git/)
-* [oh-my-zsh (AUR)](https://aur.archlinux.org/packages/oh-my-zsh-git/)
+* [antigen (AUR)](https://aur.archlinux.org/packages/antigen-git)
 * [Generic Colouriser (AUR)](https://aur.archlinux.org/packages/grc/)
+
+In order to make this installation portable, the initialization script for Antigen will be symlinked into our the antigen folder after installation.
 
 Once installed...
 
 ```sh
 # from inside the repo
 stow zsh
-chsh $USER --shell /bin/zsh
+ln -s $ANTIGEN_INIT $HOME/.config/antigen/antigen.zsh
+sudo chsh $USER --shell=/bin/zsh
 # enter password
 # restart shell
 ```
@@ -82,18 +82,17 @@ chsh $USER --shell /bin/zsh
 
 ---
 
-### vim
+### vim/neovim
 
 * [vim-git (AUR)](https://aur.archlinux.org/packages/vim-git/) for access to the system clipboard.
 * vim plugins are managed by [vim-plug (AUR)](https://aur.archlinux.org/packages/vim-plug/).
   
-    * Install plugins by opening `vim ~/.vimrc`
+    * Install plugins by opening `vim ~/.vimrc` or `nvim ~/.config/nvim/init.vim`
     * :source %
     * :PlugInstall
 
 * i3 config .vim is included with code folding if a line starts with 3 pound `#` signs.
 * DOSini code folding .vim for polybar config.
-
 
 ---
 
@@ -101,15 +100,16 @@ chsh $USER --shell /bin/zsh
 I don't recommend using stow for managing these because this would result in a symlink to a user folder that may be deleted later. Copy the files instead after reading them.
 
 * [reflector](https://www.archlinux.org/packages/community/any/reflector/) updates the [pacman mirrorlist](
-https://www.archlinux.org/packages/core/any/pacman-mirrorlist/) everytime the mirrorlist is installed.
+  https://www.archlinux.org/packages/core/any/pacman-mirrorlist/) everytime the mirrorlist is installed.
 * cached versions of packages are deleted when a package is uninstalled
 * only the last 3 versions of packages are retained
+* [symlink sh to dash](https://wiki.archlinux.org/index.php/Dash#Relinking_.2Fbin.2Fsh)
 
 ---
 
-### TODO
+### TODO:
 
-* Separate zsh installation from bash installation
-* Make zsh installation more friendly to non-Arch systems (e.g. Debian, openSUSE, VoidLinux, Gentoo, RHEL)
-* Migration to [GNU Stow](https://www.gnu.org/software/stow/) possibly augmented to warn about configuration dependencies.
+* xbps setup config files for VoidLinux
+* apt config files for Debian system
+* Migration to [GNU Stow](https://www.gnu.org/software/stow/); Possibly augmented to warn about configuration dependencies.
 

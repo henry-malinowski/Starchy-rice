@@ -6,3 +6,7 @@ vim/.vim/swapped
 mpd/.config/mpd/**
 !/mpd/.config/mpd/mpd.conf
 !/mpd/.config/mpd/playlists
+
+*.zwc
+.zcompdump
+zsh/.config/antigen/antigen.zsh
