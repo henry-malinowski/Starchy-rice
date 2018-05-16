@@ -6,3 +6,4 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
