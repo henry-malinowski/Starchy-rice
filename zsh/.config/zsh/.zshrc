@@ -38,10 +38,10 @@ zstyle ':comletion:*' menu select
 # set cool 'PS1' if we're in zsh and no theme is set, for some reason this has to be after ANTIGEN loading
 if [ -z "$ZSH_THEME" ]; then
     # root has a sligtly different prompt so we don't forget the power it holds
-    if (( EUDI == 0 )); then
-        PROMPT="%F{magenta}[%F{red}ROOT%F{yellow}@%F{green}%m %F{blue}%1~%F{magenta}] %F{red}#%f "
-    else
+    if [ "$(id -u)" -ne "0" ]; then
         PROMPT="%F{magenta}[%F{red}%n%F{yellow}@%F{green}%m %F{blue}%1~%F{magenta}] %F{red}>%f "
+    else
+        PROMPT="%F{magenta}[%F{red}ROOT%F{yellow}@%F{green}%m %F{blue}%1~%F{magenta}] %F{red}#%f "
     fi
     ZSH_THEME="Starchy_zsh"
 fi
