@@ -50,15 +50,21 @@ fi
 [[ -x "$(command -v nvim)" ]] && export MANPAGER="nvim +set\ filetype=man -"
 
 # Loading generic colouriser
-[[ -a "/etc/grc.zsh" ]] && source "/etc/grc.zsh"
+# The first is used by Arch Linux, Debian, and probably most distros.
+# The second is used by Void Linux ¯\_(ツ)_/¯
+if [[ -a "/etc/grc.zsh" ]]; then
+    source "/etc/grc.zsh"
+elif [[ -a "/usr/share/grc/grc.zsh" ]]; then
+    source "/usr/share/grc/grc.zsh"
+fi
 
 # manually setup dir_colors because the plugin is bugged
 # It (incorrectly) assumes that $HOME is $ZDOTDIR; this is only true by default
 if [ -f "$ZDOTDIR/.dir_colors" ]; then
-    eval `dircolors $ZDOTDIR/.dir_colors`
+    eval "`dircolors $ZDOTDIR/.dir_colors`"
 fi
 
-# load aliases after GRC to override it
+# load aliases after GRC to override it. Specifically `ls` because our's is cooler
 source $ZDOTDIR/zsh_aliases
 
 #vim: ft=zsh
