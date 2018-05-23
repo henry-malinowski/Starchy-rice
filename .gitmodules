@@ -1,3 +1,0 @@
-[submodule ".config/highlight"]
-	path = .config/highlight
-	url = git@github.com:bezhermoso/base16-highlight
