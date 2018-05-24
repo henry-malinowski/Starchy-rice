@@ -1,7 +1,7 @@
 # Starchy-rice
 ### i3-wm
 
-i3-gaps-next-git
+i3-gaps-next-git, this also requires `~/.Xresources` at the moment.
 
 * [mpd](https://www.archlinux.org/packages/extra/x86_64/mpd/), [libmpdclient](https://www.archlinux.org/packages/extra/x86_64/libmpdclient/), [mpc](https://www.archlinux.org/packages/extra/x86_64/mpc/) 
 
@@ -84,13 +84,15 @@ sudo chsh $USER --shell=/bin/zsh
 
 ### vim/neovim
 
+While vim and neovim can be stow'ed separately it is worth noting that neovim's `after/` and `syntax/` directories are just symlinks to vim's directories.
+
 * [vim-git (AUR)](https://aur.archlinux.org/packages/vim-git/) for access to the system clipboard.
 * [vim-runtime-git (AUR)](https://aur.archlinux.org/packages/vim-runtime-git/) for compatability with `vim-git`
 * vim plugins are managed by [vim-plug (AUR)](https://aur.archlinux.org/packages/vim-plug/).
   
     * Install plugins by opening `vim ~/.vimrc` or `nvim ~/.config/nvim/init.vim`
-    * :source %
-    * :PlugInstall
+    * `:source %`
+    * `:PlugInstall`
 
 * i3 config .vim is included with code folding if a line starts with 3 pound `#` signs.
 * DOSini code folding .vim for polybar config.
@@ -111,6 +113,7 @@ I don't recommend using stow for managing these because this would result in a s
 ### TODO:
 
 * xbps setup config files for VoidLinux
+* remove/extract `~/.Xresources` requirement for Polybar.
 * apt config files for Debian system
 * Migration to [GNU Stow](https://www.gnu.org/software/stow/); Possibly augmented to warn about configuration dependencies.
 
