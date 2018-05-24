@@ -8,8 +8,6 @@ export BROWSER="chromium"
 HISTFILE=$HOME/.cache/zsh/.zsh_history
 HISTSIZE=8192
 SAVEHIST=512
-setopt appendhistory beep extendedglob notify
-unsetopt autocd
 # End: History setup
 
 # make sure zsh doesn't use a confusing vi mode
@@ -27,6 +25,10 @@ if [ -s $ANTIGEN_INIT ]; then
     source $ANTIGEN_INIT
     antigen init "$HOME/.config/antigen/.antigenrc"
 fi
+
+# Options set below Antigen loading because Antigen is overriding AUTO_CD
+setopt appendhistory beep extendedglob notify
+unsetopt AUTO_CD
 
 # Start: completions cache
 autoload -Uz promptinit compinit
