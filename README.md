@@ -85,6 +85,7 @@ sudo chsh $USER --shell=/bin/zsh
 ### vim/neovim
 
 * [vim-git (AUR)](https://aur.archlinux.org/packages/vim-git/) for access to the system clipboard.
+* [vim-runtime-git (AUR)](https://aur.archlinux.org/packages/vim-runtime-git/) for compatability with `vim-git`
 * vim plugins are managed by [vim-plug (AUR)](https://aur.archlinux.org/packages/vim-plug/).
   
     * Install plugins by opening `vim ~/.vimrc` or `nvim ~/.config/nvim/init.vim`
