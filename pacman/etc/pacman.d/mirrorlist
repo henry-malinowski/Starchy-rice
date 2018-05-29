@@ -3,22 +3,29 @@
 ################################################################################
 
 # With:       reflector --protocol https --country 'United States' --latest 200 --age 24 --sort rate --save /etc/pacman.d/mirrorlist
-# When:       2018-03-06 17:04:30 UTC
+# When:       2018-05-29 04:47:14 UTC
 # From:       https://www.archlinux.org/mirrors/status/json/
-# Retrieved:  2018-03-06 17:04:25 UTC
-# Last Check: 2018-03-06 16:22:42 UTC
+# Retrieved:  2018-05-29 04:47:10 UTC
+# Last Check: 2018-05-29 04:28:54 UTC
 
-Server = https://mirror.dal10.us.leaseweb.net/archlinux/$repo/os/$arch
-Server = https://mirror.kaminski.io/archlinux/$repo/os/$arch
-Server = https://arch.mirror.constant.com/$repo/os/$arch
-Server = https://mirror.wdc1.us.leaseweb.net/archlinux/$repo/os/$arch
-Server = https://mirrors.lug.mtu.edu/archlinux/$repo/os/$arch
-Server = https://mirror.epiphyte.network/archlinux/$repo/os/$arch
-Server = https://arlm.tyzoid.com/$repo/os/$arch
-Server = https://mirrors.rit.edu/archlinux/$repo/os/$arch
-Server = https://mirror.sfo12.us.leaseweb.net/archlinux/$repo/os/$arch
-Server = https://mirror.grig.io/archlinux/$repo/os/$arch
-Server = https://mirrors.ocf.berkeley.edu/archlinux/$repo/os/$arch
-Server = https://mirrors.rutgers.edu/archlinux/$repo/os/$arch
-Server = https://arch.mirror.square-r00t.net/$repo/os/$arch
 Server = https://mirror.hackingand.coffee/arch/$repo/os/$arch
+Server = https://mirror.dal10.us.leaseweb.net/archlinux/$repo/os/$arch
+Server = https://mirror.epiphyte.network/archlinux/$repo/os/$arch
+Server = https://mirrors.rit.edu/archlinux/$repo/os/$arch
+Server = https://mirrors.lug.mtu.edu/archlinux/$repo/os/$arch
+Server = https://mirrors.sonic.net/archlinux/$repo/os/$arch
+Server = https://mirrors.ocf.berkeley.edu/archlinux/$repo/os/$arch
+Server = https://mirror.sfo12.us.leaseweb.net/archlinux/$repo/os/$arch
+Server = https://mirror.lty.me/archlinux/$repo/os/$arch
+Server = https://archlinux.us-central.mirror.zoidplex.net/$repo/os/$arch
+Server = https://mirror.stephen304.com/archlinux/$repo/os/$arch
+Server = https://mirror.grig.io/archlinux/$repo/os/$arch
+Server = https://arch.mirror.square-r00t.net/$repo/os/$arch
+Server = https://archlinux.us-east.mirror.zoidplex.net/$repo/os/$arch
+Server = https://mirrors.rutgers.edu/archlinux/$repo/os/$arch
+Server = https://arch.mirror.constant.com/$repo/os/$arch
+Server = https://mirror.kaminski.io/archlinux/$repo/os/$arch
+Server = https://archlinux.us-west.mirror.zoidplex.net/$repo/os/$arch
+Server = https://mirrors.kernel.org/archlinux/$repo/os/$arch
+Server = https://archlinux.surlyjake.com/archlinux/$repo/os/$arch
+Server = https://mirror.wdc1.us.leaseweb.net/archlinux/$repo/os/$arch
