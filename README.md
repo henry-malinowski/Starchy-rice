@@ -100,7 +100,7 @@ While vim and neovim can be stow'ed separately it is worth noting that neovim's 
 ---
 
 ### pacman
-I don't recommend using stow for managing these because this would result in a symlink to a user folder that may be deleted later. Copy the files instead after reading them.
+I don't recommend using stow for managing these because this would result in a symlink to a user folder that may be deleted later. Copy the files instead after reading them. Since the pacman 5.1 update, the package [pacman-contrib](https://www.archlinux.org/packages/community/x86_64/pacman-contrib/) is required.
 
 * [reflector](https://www.archlinux.org/packages/community/any/reflector/) updates the [pacman mirrorlist](
   https://www.archlinux.org/packages/core/any/pacman-mirrorlist/) everytime the mirrorlist is installed.
