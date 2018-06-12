@@ -12,4 +12,5 @@ else
     setxkbmap us
     setxkbmap -layout us,ru
     betterlockscreen --suspend
+    exit 0
 fi
