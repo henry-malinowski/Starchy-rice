@@ -1,10 +1,13 @@
 #!/usr/bin/sh
 
 # Terminate already running bar instances
-killall -q polybar
+#killall -q polybar
 
-# Wait until the processes have been shut down
-while pgrep -x polybar >/dev/null; do sleep 1; done
+if ! killall -q polybar
+then
+    # Wait until the processes have been shut down
+    while pgrep -x polybar >/dev/null; do sleep 1; done
+fi
 
 # since we use NetworkManager let's use it to snag our network interfaces in a platform agnostic fashon
 export NM_ETHERNET_INTERFACE=$(nmcli device show | grep ethernet -B 1 | awk 'NR==1{print $2}')
