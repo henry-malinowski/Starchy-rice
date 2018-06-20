@@ -5,7 +5,7 @@ Plug 'yuttie/comfortable-motion.vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
-Plug 'lifepillar/vim-solarized8'
+Plug 'micha/vim-colors-solarized'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 call plug#end()
 
@@ -20,7 +20,7 @@ set mouse=a
 " use the system clipboard
 set clipboard=unnamedplus
 
-"Set up Solarized 'lifepillar/vim-solarized8'
-set termguicolors
+"Set up Solarized 'micha/vim-colors-solarized'
+"set termguicolors
+colorscheme solarized
 set background=dark
-colorscheme solarized8
