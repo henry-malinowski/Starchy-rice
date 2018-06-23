@@ -17,10 +17,12 @@ set history=64
 set autoindent
 set mouse=a
 
+" 4 space soft tabs
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+
 " use the system clipboard
 set clipboard=unnamedplus
 
 "Set up Solarized 'micha/vim-colors-solarized'
-"set termguicolors
 colorscheme solarized
 set background=dark
