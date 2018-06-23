@@ -4,7 +4,9 @@ Type = Package
 Target = pacman-mirrorlist
 
 [Action]
-Description = Updating pacman-mirrorlist with reflector and removing pacnew...
+Description = Updating pacman-mirrorlist with rankmirrors and removing mirrorlist.backup...
 When = PostTransaction
-Depends = reflector
-Exec = /bin/sh -c "reflector --protocol https --country 'United States' --latest 200 --age 24 --sort rate --save /etc/pacman.d/mirrorlist;  rm -f /etc/pacman.d/mirrorlist.pacnew"
+Depends = awk
+Depends = sed
+Depends = pacman-contrib
+Exec = /bin/sh -c "cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup; awk '/^## United States$/{f=1}f==0{next}/^$/{exit}{print substr($0, 2)}' /etc/pacman.d/mirrorlist.backup; sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup; rankmirrors -n 4 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist"
