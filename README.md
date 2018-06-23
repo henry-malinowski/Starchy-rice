@@ -107,8 +107,8 @@ sudo mkdir /etc/pacman.d/hooks
 sudo install ./pacman/etc/pacman.d/hooks/* --target-directory=/etc/pacman.d/hooks/ --mode=644
 ```
 
-* [reflector](https://www.archlinux.org/packages/community/any/reflector/) updates the [pacman mirrorlist](
-  https://www.archlinux.org/packages/core/any/pacman-mirrorlist/) everytime the mirrorlist is installed.
+* [rankmirrors](https://wiki.archlinux.org/index.php/mirrors#Sorting_mirrors) updates the [pacman mirrorlist](
+  https://www.archlinux.org/packages/core/any/pacman-mirrorlist/) each time pacman-mirrorlist is updated.
 * cached versions of packages are deleted when a package is uninstalled
 * only the last 3 versions of packages are retained
 * [symlink sh to dash](https://wiki.archlinux.org/index.php/Dash#Relinking_.2Fbin.2Fsh)
