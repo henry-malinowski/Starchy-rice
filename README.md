@@ -43,6 +43,9 @@ i3-gaps-next-git, this also requires `~/.Xresources` at the moment.
     * [ttf-material-icons (AUR)](https://aur.archlinux.org/packages/ttf-material-icons/) install manually
     * [ttf-google-fonts-git (AUR)](https://aur.archlinux.org/packages/ttf-google-fonts-git/) OR [ttf-roboto](https://www.archlinux.org/packages/community/any/ttf-roboto/)
 
+* [xkb-switch](https://github.com/ierton/xkb-switch) [(AUR)](https://aur.archlinux.org/packages/xkb-switch/) for toggling between English and Russian.
+
+* [dunst](https://www.archlinux.org/packages/community/x86_64/dunst/) for notifications.
 ---
 
 ### zsh and bash
