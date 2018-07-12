@@ -62,7 +62,7 @@ exec --no-startup-id thunar --daemon
 floating_modifier $mod
 
 bindsym $mod+Return exec --no-startup-id $term
-##bindsym $mod+Shift+Return
+bindsym $mod+Shift+Return exec --no-startup-id xkb-switch --next && notify-send "xkb-switch" "Language switched to $(xkb-switch -p)"
 
 bindsym $mod+Shift+space    floating toggle
 bindsym $mod+space          focus mode_toggle
