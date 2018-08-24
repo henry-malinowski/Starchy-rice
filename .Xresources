@@ -61,35 +61,6 @@ URxvt.scrollBar: false
 URxvt.utf8: true
 URxvt*skipBuiltinGlyphs: true
 
-!## Aci color scheme (disabled)
-!! foreground/background
-!*background:  #182330
-!*foreground:  #B4E1FD
-!*cursorColor: #B4E1FD
-!! black
-!*color0    : #363636
-!*color8    : #424242
-!! red
-!*color1    : #FF0883
-!*color9    : #FF1E8E
-!! green
-!*color2    : #83FF08
-!*color10   : #8EFF33
-!! yellow
-!*color3    : #FF8308
-!*color11   : #FF8E1E
-!! blue
-!*color4    : #0883FF
-!*color12   : #1E8EFF
-!! magenta
-!*color5    : #8308FF
-!*color13   : #8E1EFF
-!! cyan
-!*color6    : #08FF83
-!*color14   : #1EFF8E
-!! white
-!*color7    : #B6B6B6
-!*color15   : #C2C2C2
 
 !## Solarized color scheme for the X Window System
 !
