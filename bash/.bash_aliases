@@ -2,7 +2,7 @@
 export VISUAL="vim"
 export EDITOR="$VISUAL"
 
-alias ccat='highlight --style=solarized-dark  --out-format=ansi --tab=4'
+alias cats='highlight --style=solarized-dark  --out-format=ansi --tab=4'
 alias ls='ls -lhN --color --group-directories-first'
 alias grep='grep --color=auto'
 alias ka_urxvt='xrdb -merge ~/.Xdefaults && killall urxvt'
