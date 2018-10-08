@@ -2,6 +2,8 @@
 alias cats='highlight --style=solarized-dark  --out-format=ansi --tab=4'
 alias ls='ls -lhN --color --group-directories-first'
 alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 # only load if the script exists and i3 is running 
 if [ "$(pidof 'i3')" ]; then

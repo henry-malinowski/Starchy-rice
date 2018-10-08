@@ -73,6 +73,5 @@ if [ -f "$ZDOTDIR/.dir_colors" ]; then
 fi
 
 # load aliases after GRC to override it. Specifically `ls` because our's is cooler
-source $ZDOTDIR/zsh_aliases
+source ${ZDOTDIR}/zsh_aliases
 
-#vim: ft=zsh
