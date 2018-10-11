@@ -11,6 +11,7 @@ else
     # make sure we aren't locked out because the language is not set to English
     setxkbmap us
     setxkbmap -layout us,ru
-    betterlockscreen --lock
-    exit 0
+
+    # lock proper
+    betterlockscreen --$1
 fi
