@@ -53,7 +53,7 @@ font-2 = Symbols Nerd Font:size=9;1.5
 ;font-3 = Wuncon Siji:pixelsize=10
 
 modules-left = i3 mpd
-modules-center = date
+modules-center = date-swatch
 modules-right = backlight-acpi pulseaudio xkeyboard memory cpu nm-ethernet battery temperature powermenu
 tray-position = right
 tray-padding = 2
@@ -315,7 +315,6 @@ label = %date%%time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-#sink = alsa_output.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.analog-stereo
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL
 label-volume-foreground = ${root.foreground}
@@ -398,8 +397,9 @@ animation-charging-framerate = 1500
 
 [module/temperature]
 type = internal/temperature
-thermal-zone = 0
-warn-temperature = 67
+
+thermal-zone = 4
+warn-temperature = 75
 
 format = <ramp> <label>
 format-underline = #f50a4d
@@ -457,6 +457,17 @@ menu-2-0 = power off
 menu-2-0-exec = poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
+
+[module/date-swatch]
+type = custom/script
+exec = ~/.config/polybar/Swatch_Internet_Time.py --tail --tformat ' %Y-%m-%d' --alt_format ' %Y-%m-%dT%H:%M:%S'
+tail = True
+
+click-left = kill -s USR1 %pid%
+click-right = kill -s USR2 %pid%
+
+format-prefix = 
+format-prefix-foreground = ${colors.foreground-alt}
 
 [settings]
 screenchange-reload = true
