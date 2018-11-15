@@ -57,6 +57,8 @@ If a theme is not loaded both bash and zsh have matching PS1 prompts.
 
 In order to make this installation portable, the initialization script for Antigen will be symlinked into our the antigen folder after installation.
 
+To locate the antigen.zsh initialization script try running `find /usr -name 'antigen.zsh'`
+
 Once installed...
 
 ```sh
