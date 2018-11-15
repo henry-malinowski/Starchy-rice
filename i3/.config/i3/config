@@ -11,6 +11,7 @@
 ###--Basic Definitions---###
 set $mod Mod4
 set $term st
+set $term_alt alacritty
 set $BROWSER qutebrowser
 set $CHROME chromium
 
@@ -61,11 +62,13 @@ exec --no-startup-id thunar --daemon
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-bindsym $mod+Return exec --no-startup-id $term
-bindsym $mod+Shift+Return exec --no-startup-id xkb-switch --next && notify-send "xkb-switch" "Language switched to $(xkb-switch -p)"
+bindsym $mod+Return         exec --no-startup-id $term
+bindsym $mod+Shift+Return   exec --no-startup-id $term_alt 
 
 bindsym $mod+Shift+space    floating toggle
-bindsym $mod+space          focus mode_toggle
+
+# FlagEcho is a program I wrote originally in Shell and converted to C. Find the repo
+bindsym $mod+space          exec --no-startup-id xkb-switch --next && notify-send "xkb-switch" "Language is now $(xkb-switch -p)  $(/usr/bin/FlagEcho $(xkb-switch -p))"
 
 bindsym $mod+Escape         workspace prev
 bindsym $mod+Shift+Escape   exec i3-msg exit
@@ -74,7 +77,9 @@ bindsym $mod+BackSpace       exec --no-startup-id sh ~/.config/i3/script_lock.sh
 bindsym $mod+Shift+BackSpace exec --no-startup-id sh ~/.config/i3/script_lock.sh suspend
 
 #bindsym $mod+grave
-bindsym $mod+Delete             exec --no-startup-id xset dpms force off
+#bindsym $mod+Shift+grave
+
+bindsym $mod+Delete exec --no-startup-id xset dpms force off
 #bindsym $mod+Shift+Delete
 
 bindsym $mod+q       kill
