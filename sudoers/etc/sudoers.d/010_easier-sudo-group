@@ -1,0 +1,2 @@
+# vim: set ft=sudoers
+%sudo ALL=(ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/reboot,/usr/bin/mount,/usr/bin/umount       

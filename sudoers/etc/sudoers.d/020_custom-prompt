@@ -1,0 +1,3 @@
+## vim: set ft=sudoers
+Defaults passprompt="[sudo] requesting elecvation for %p@%h: "
+

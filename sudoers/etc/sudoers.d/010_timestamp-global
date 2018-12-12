@@ -1,0 +1,4 @@
+# vim set ft=sudoers
+
+## Drops requirement for reentering sudo password for each terminal
+Defaults timestamp_type=global
