@@ -5,6 +5,6 @@ An examples of installing two files would be...
 
 ```sh
 cd ./etc/sudoers.d
-sudo install --mode=0440 010_easier-sudo-group 010_no-tty-tickets 020_custom-prompt --target-directory=/etc/sudoers.d
+sudo install -m 0440 010_easier-sudo-group 020_custom-prompt -t /etc/sudoers.d
 ```
 
