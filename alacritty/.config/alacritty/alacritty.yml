@@ -12,7 +12,7 @@ env:
   # Note that some xterm terminfo databases don't declare support for italics.
   # You can verify this by checking for the presence of `smso` and `sitm` in
   # `infocmp xterm-256color`.
-  TERM: alacritty-256color
+  TERM: xterm-256color 
 
 window:
   # Window dimensions in character columns and lines
@@ -26,17 +26,17 @@ window:
   # Units are physical pixels; this is not DPI aware.
   # (change requires restart)
   padding:
-    x: 0
-    y: 0
+    x: 2
+    y: 2
 
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
-  decorations: true
+  decorations: full
 
 scrolling:
   # How many lines of scrollback to keep,
   # '0' will disable scrolling.
-  history: 10000
+  history: 2048
 
   # Number of lines the viewport will move for every line
   # scrolled when scrollback is enabled (history > 0).
@@ -60,7 +60,7 @@ scrolling:
 tabspaces: 4
 
 # When true, bold text is drawn using the bright variant of colors.
-draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: false
 
 # Font configuration (changes require restart)
 #
@@ -84,19 +84,19 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: RobotoMono # should be "Menlo" or something on macOS.
+    family: Roboto Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
-    style: Regular
+    # style: Regular
 
   # The bold font face
   bold:
-    family: RobotoMono # should be "Menlo" or something on macOS.
+    family: Roboto Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
-    style: Bold
+    # style: Bold
 
   # The italic font face
   italic:
-    family: RobotoMono # should be "Menlo" or something on macOS.
+    family: Roboto Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Italic
 
@@ -116,17 +116,8 @@ font:
     x: 0
     y: 0
 
-  # OS X only: use thin stroke font rendering. Thin strokes are suitable
-  # for retina displays, but for non-retina you probably want this set to
-  # false.
-  use_thin_strokes: false
-
 # Should display the render timer
 render_timer: false
-
-# Use custom cursor colors. If true, display the cursor in the cursor.foreground
-# and cursor.background colors, otherwise invert the colors of the cursor.
-custom_cursor_colors: false
 
 # Colors (Solarized Dark)
 colors:
@@ -218,18 +209,21 @@ selection:
 
 dynamic_title: true
 
-hide_cursor_when_typing: false
+mouse.hide_cursor_when_typing: false
 
 # Style of the cursor
 #
-# Values for 'cursor_style':
+# Values for 'cursor.style':
 # - Block
 # - Underline
 # - Beam
-cursor_style: Block
+cursor.style: Block
+
+# Whether the cursor should be a hollow block on window focus loss
+cursor.unfocused_hollow_cursor: true
 
 # Live config reload (changes require restart)
-live_config_reload: false 
+live_config_reload: true
 
 # Shell
 #
@@ -294,6 +288,8 @@ live_config_reload: false
 key_bindings:
   - { key: V,        mods: Control|Shift,    action: Paste               }
   - { key: C,        mods: Control|Shift,    action: Copy                }
+  - { key: Paste,                   action: Paste                        }
+  - { key: Copy,                    action: Copy                         }
   - { key: Q,        mods: Command, action: Quit                         }
   - { key: W,        mods: Command, action: Quit                         }
   - { key: Insert,   mods: Shift,   action: PasteSelection               }
