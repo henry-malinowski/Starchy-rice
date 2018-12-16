@@ -1,3 +1,2 @@
 ## vim: set ft=sudoers
 Defaults passprompt="[sudo] requesting elevation for %p@%h: "
-
