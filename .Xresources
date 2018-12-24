@@ -61,12 +61,12 @@ URxvt.scrollBar: false
 URxvt.utf8: true
 URxvt*skipBuiltinGlyphs: true
 
+! fix bold colors being wrong
+URxvt.intensityStyles: false
 
 !## Solarized color scheme for the X Window System
 !
 ! http://ethanschoonover.com/solarized
-
-
 ! Common
 #define S_yellow        #b58900
 #define S_orange        #cb4b16
@@ -146,13 +146,13 @@ URxvt*skipBuiltinGlyphs: true
     #pragma message ( "Could not detect resolution for Font selection (URxvt)" )
 #endif
 
-URxvt.font:             xft:RobotoMono-Regular:style=Regular:pixelsize=URXVT_PIXELSIZE,\
+URxvt.font:             xft:LiberationMono:style=Regular:pixelsize=URXVT_PIXELSIZE,\
                         xft:Unifont:style=Regular:pixelsize=URXVT_PIXELSIZE,\
                         xft:FontAwesome:pixelsize=URXVT_PIXELSIZE,\
                         xft:MaterialIcons:style=Regulate:pixelsize=URXVT_PIXELSIZE,\
                         xft:Wuncon Sigi:pixelsize=URXVT_PIXELSIZE,\
                         xft:FontAwesome:pixelsize=URXVT_PIXELSIZE
-URxvt.boldFont:         xft:RobotoMono-Bold:style=Bold:pixelsize=URXVT_PIXELSIZE
-URxvt.italicFont:       xft:RobotoMono-Italic:style=Italic:pixelsize=URXVT_PIXELSIZE
-URxvt.boldItalicFont:   xft:RobotoMono-BoldItalic:style=Bold Italic:pixelsize=URXVT_PIXELSIZE
+URxvt.boldFont:         xft:LiberationMono:style=Bold:pixelsize=URXVT_PIXELSIZE
+URxvt.italicFont:       xft:LiberationMono:style=Italic:pixelsize=URXVT_PIXELSIZE
+URxvt.boldItalicFont:   xft:LiberationMono:style=Bold Italic:pixelsize=URXVT_PIXELSIZE
 
