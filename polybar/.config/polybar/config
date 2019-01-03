@@ -460,7 +460,7 @@ menu-2-1-exec = menu-open-0
 
 [module/date-swatch]
 type = custom/script
-exec = ~/.config/polybar/Swatch_Internet_Time.py --tail --tformat ' %Y-%m-%d' --alt_format ' %Y-%m-%dT%H:%M:%S'
+exec = python3 -u ~/.config/polybar/Swatch_Time.py --tail --format ' %Y-%m-%d@{Beat}' --alt-format ' %Y-%m-%dT%H:%M:%S'
 tail = True
 
 click-left = kill -s USR1 %pid%
