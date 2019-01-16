@@ -5,8 +5,9 @@ Plug 'yuttie/comfortable-motion.vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
-Plug 'micha/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'davidhalter/jedi-vim'
 call plug#end()
 
 syntax enable
@@ -23,6 +24,6 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 " use the system clipboard
 set clipboard=unnamedplus
 
-"Set up Solarized 'micha/vim-colors-solarized'
-colorscheme solarized
-set background=dark
+"Set up Gruvbox 'morhetz/gruvbox'"
+let g:gruvbox_italic=1
+colorscheme gruvbox
