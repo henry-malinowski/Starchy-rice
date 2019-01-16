@@ -53,7 +53,7 @@ font-2 = Symbols Nerd Font:size=9;1.5
 ;font-3 = Wuncon Siji:pixelsize=10
 
 modules-left = i3 mpd
-modules-center = date-swatch
+modules-center = info-swatchtime
 modules-right = backlight-acpi pulseaudio xkeyboard memory cpu nm-ethernet battery temperature powermenu
 tray-position = right
 tray-padding = 2
@@ -398,7 +398,6 @@ animation-charging-framerate = 1500
 [module/temperature]
 type = internal/temperature
 
-thermal-zone = 4
 warn-temperature = 75
 
 format = <ramp> <label>
@@ -452,15 +451,17 @@ menu-1-0 = cancel
 menu-1-0-exec = menu-open-0
 menu-1-1 = reboot
 menu-1-1-exec = reboot
+menu-1-2 = ...to Windows
+menu-1-2-exec = efibootmgr -n $(efibootmgr | grep "Windows Boot Manager" | grep -o "[[:digit:]]*") && reboot
 
 menu-2-0 = power off
 menu-2-0-exec = poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
-[module/date-swatch]
+[module/info-swatchtime]
 type = custom/script
-exec = python3 -u ~/.config/polybar/Swatch_Time.py --tail --format ' %Y-%m-%d@{Beat}' --alt-format ' %Y-%m-%dT%H:%M:%S'
+exec = ~/.config/polybar/Swatch_Time.py --tail --format ' %Y-%m-%d@{Beat}' --alt-format ' %Y-%m-%dT%H:%M:%S'
 tail = True
 
 click-left = kill -s USR1 %pid%

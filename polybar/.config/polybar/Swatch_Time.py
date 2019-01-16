@@ -1,21 +1,22 @@
-#!/usr/bin/python
-# call python with the flag -u or set the environment variable PYTHONUNBUFFERED=1
+#!/usr/bin/env -S python3 -u
 import argparse
 import datetime
 import math
 import os
 import signal
 import time
+import types
+from typing import List
 
 
 class SwatchTime:
 
     @staticmethod
-    def get_beat(now: datetime.datetime = datetime.datetime.now() + datetime.timedelta(hours = 1)):
+    def get_beat(now: datetime.datetime = datetime.datetime.utcnow() + datetime.timedelta(hours = 1)):
         """
         Returns the current time as an integer representing the numbers of .beats into the day.
         :param now: A datetime object of some time.
-        :return: int the number of beats in now's day
+        :return: int The .beat of the current moments in `now`'s day.
         """
         return math.floor(
             now.hour * 41.666 +
@@ -40,59 +41,52 @@ class PrintCycle:
         self.args = argv
 
     def loop(self):
+        """
+        Infinite loop that prints and waits.
+        """
         while True:
             PrintCycle.print_datetime(self)
             time.sleep(self.args.delay)
 
     def print_datetime(self):
+        """
+        Prints a date/time code based on the state of self.use_swatch
+        """
         if self.use_swatch:
             SwatchTime.print_swatch(datetime.datetime.utcnow(), self.args.format)
         else:
             PrintCycle.print_alt_format(self)
 
     def print_alt_format(self):
-        # TODO move to using datetime module in-place of `time`
-        if self.args.utc:
-            now = time.gmtime()
-        else:
-            now = time.localtime()
-
-        print(time.strftime(self.args.alt_format, now))
-
-    def handler_toggle_format(self, signum, frame):
         """
-        Only toggle if alt_format is set
+        Prints a standard date/time code based on the utc argument
+        :return:
+        """
+        if self.args.utc:
+            now = datetime.datetime.utcnow()
+        else:
+            now = datetime.datetime.now()
+
+        print(now.strftime(self.args.alt_format))
+
+    def handler_toggle_format(self, signum: int, frame: types.FrameType):
+        """
+        Only toggle if alt_format is set.
         """
         if self.args.alt_format is not None:
             self.use_swatch = not self.use_swatch
             self.print_datetime()
 
 
-def handler_print_pid(signum, frame):
+def handler_print_pid(signum: int, frame: types.FrameType):
+    """
+    Prints the PID of the script to stdout
+    """
     print('PID: {0}'.format(os.getpid()))
     time.sleep(4)
 
 
-def alt_toggle(do_toggle=False):
-    """
-    Yields the current toggle state. The state is switched to its alternate stage (e.g. from True to False) if
-    do_toggle is set to True. In this case the state is inverted and then yielded
-    warning:
-    This is currently the equivalent of a C function with a static variable inside. This has race-conditions, and
-    doesn't support multiple threads calling it; the GIL should protect from this.
-    I will probably make it a class that can be instantiated..
-    :param do_toggle: Controls if the internal state will be changed.
-    :return: The state of an internal variable named `is_alt`.
-
-    """
-    is_alt = True
-    while True:
-        if do_toggle:
-            is_alt = not is_alt
-        yield is_alt
-
-
-def get_args(argv=None):
+def get_args(argv: List[str] = None):
     # ArgumentDefaultsHelpFormatter can show the defaults for us
     parser = argparse.ArgumentParser(
         description='Give date and time as Swatch Internet Time.',
@@ -123,25 +117,31 @@ def get_args(argv=None):
 
     group_tz = parser.add_mutually_exclusive_group()
     group_tz.add_argument('--utc',
-                          help='Set the time zone to UTC (Coordinated Universal Time). Default: False.',
+                          help='Display standard time as UTC (Coordinated Universal Time). Default: False.',
                           action='store_true')
     group_tz.add_argument('--local-time',
-                          help='Set displayed to the local time zone. Default: True.',
+                          help='Display standard time as local time. Default: True.',
                           action='store_false')
     return parser.parse_args(argv)
 
 
 def main():
-    arg = get_args()
+    args = get_args()
 
-    time_cycle = PrintCycle(arg)
+    # this is for one-shotting the program to get Swatch Internet time
+    if args.tail is False:
+        SwatchTime.print_swatch(datetime.datetime.utcnow(), args.format)
+        exit(0)
+
+    time_cycle = PrintCycle(args)
 
     # do not set the signal handlers if we are on Windows
     if os.name != 'nt':
         signal.signal(signal.SIGUSR1, time_cycle.handler_toggle_format)
         signal.signal(signal.SIGUSR2, handler_print_pid)
 
-    if arg.verbose:
+    # print the programs PID if it is requested
+    if args.verbose:
         print('PID: {0}'.format(os.getpid()))
 
     time_cycle.loop()
