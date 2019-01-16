@@ -50,7 +50,7 @@ configuration {
 /*	window-format: "{w}    {i}{c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-	theme: "solarized_alternate";
+	theme: "gruvbox-dark";
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/
@@ -67,3 +67,4 @@ configuration {
 /*	display-keys: ;*/
     drun-icon-theme: "Papirus-Dark";
 }
+/* vim:ft=css */
