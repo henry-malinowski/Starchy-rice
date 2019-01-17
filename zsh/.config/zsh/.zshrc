@@ -35,6 +35,7 @@ autoload -Uz promptinit compinit
 promptinit
 compinit
 zstyle ':comletion:*' menu select
+zstyle ':comletion:*' rehash true
 # End: completions cache
 
 # set cool 'PS1' if we're in zsh and no theme is set, for some reason this has to be after ANTIGEN loading
@@ -74,4 +75,3 @@ fi
 
 # load aliases after GRC to override it. Specifically `ls` because our's is cooler
 source ${ZDOTDIR}/zsh_aliases
-
