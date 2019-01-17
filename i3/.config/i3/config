@@ -40,13 +40,10 @@ exec_always --no-startup-id feh --bg-fill /home/henry/.config/wallpaper
 exec --no-startup-id unclutter --timeout 5 --fork
 
 # Lets add the Russian keyboard layout to help with homework
-exec --no-startup-id setxkbmap -layout us,ru
+exec_always --no-startup-id setxkbmap -layout us,ru
 
 #Launch Polybar using its startup script
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-
-# daemonize urxvt (also make sure $TERM is urxvtc)
-#exec_always --no-startup-id urxvtd -o --fork
 
 # start NetworkManager applet. Somestimes the GUI is easier
 exec --no-startup-id exec nm-applet --no-agent
