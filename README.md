@@ -109,7 +109,7 @@ The pacman hooks man be added using the following commands from the root of this
 
 ```sh
 sudo mkdir /etc/pacman.d/hooks
-sudo install ./pacman/etc/pacman.d/hooks/* --target-directory=/etc/pacman.d/hooks/ --mode=644
+sudo install -m 0644 ./pacman/etc/pacman.d/hooks/* -t /etc/pacman.d/hooks/
 ```
 
 * [rankmirrors](https://wiki.archlinux.org/index.php/mirrors#Sorting_mirrors) updates the [pacman mirrorlist](
