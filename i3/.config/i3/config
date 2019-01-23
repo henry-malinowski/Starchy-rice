@@ -10,10 +10,10 @@
 
 ###--Basic Definitions---###
 set $mod Mod4
-set $term st
+set $term termite
 set $term_alt alacritty
 set $BROWSER qutebrowser
-set $CHROME chromium
+set $CHROME vivaldi
 
 ## Needed for i3-gaps
 hide_edge_borders both
@@ -30,8 +30,8 @@ font pango:Roboto-Medium 8
 # enable numlock because all my current systems have a numpad
 exec --no-startup-id numlockx
 
-# start mpd (polybar will also complain is it isn't loaded first)
-exec --no-startup-id mpd
+# load redshift to save the eyes
+exec --no-startup-id redshift-gtk
 
 # Set wallpaper to whatever .config/wallpaper is symlinked to
 exec_always --no-startup-id feh --bg-fill /home/henry/.config/wallpaper
