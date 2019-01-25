@@ -31,13 +31,12 @@ i3-gaps-next-git, this also requires `~/.Xresources` at the moment.
 
 * [compton](https://www.archlinux.org/packages/community/x86_64/compton/)
 
-  * Compton is not configured just turned on
-
 * [termite](https://wiki.archlinux.org/index.php/Termite)
 
 * [polybar](https://aur.archlinux.org/packages/polybar-git)
 
-  * mpd hook
+  * [SwatchTime ](https://github.com/henry-malinowski/SwatchTime)[(AUR)](https://aur.archlinux.org/packages/swatchtime-git/)
+  * MPD hook
   * fonts
     * [ttf-nerd-fonts-symbols (AUR)](https://aur.archlinux.org/packages/ttf-nerd-fonts-symbols/)
     * [ttf-material-icons (AUR)](https://aur.archlinux.org/packages/ttf-material-icons/) install manually
