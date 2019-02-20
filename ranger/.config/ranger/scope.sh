@@ -36,7 +36,7 @@ FILE_EXTENSION_LOWER=$(echo ${FILE_EXTENSION} | tr '[:upper:]' '[:lower:]')
 # Settings
 HIGHLIGHT_SIZE_MAX=262143  # 256KiB
 HIGHLIGHT_TABWIDTH=4
-HIGHLIGHT_STYLE='solarized-dark'
+HIGHLIGHT_STYLE='base16/gruvbox-dark-medium'
 PYGMENTIZE_STYLE='vim'
 
 
@@ -177,7 +177,7 @@ handle_mime() {
                 local highlight_format='ansi'
             else
                 local pygmentize_format='terminal'
-                local highlight_format='ansi'
+                local highlight_format='xterm256'
             fi
             highlight --replace-tabs="${HIGHLIGHT_TABWIDTH}" --out-format="${highlight_format}" \
                 --style="${HIGHLIGHT_STYLE}" --force -- "${FILE_PATH}" && exit 5
