@@ -8,6 +8,7 @@ Plug 'vim-pandoc/vim-rmarkdown'
 Plug 'morhetz/gruvbox'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'davidhalter/jedi-vim'
+Plug 'tell-k/vim-autopep8'
 call plug#end()
 
 syntax enable
