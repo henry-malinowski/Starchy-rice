@@ -1,9 +1,16 @@
-#!/usr/bin/sh
-alias cats='highlight --style=solarized-dark  --out-format=ansi --tab=4'
+#!/usr/bin/zsh
 alias ls='ls -lhN --color --group-directories-first'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+# pick correct highlight format (Reference: ranger scope.sh)
+if [[ "$( tput colors )" -ge 16 ]]; then
+    local highlight_format='xterm256'
+else
+    local highlight_format='ansi'
+fi
+alias cats="highlight --style=base16/gruvbox-dark-medium --out-format=${highlight_format} --tab=4"
 
 # only load if the script exists and i3 is running 
 if [ "$(pidof 'i3')" ]; then
