@@ -120,6 +120,5 @@ sudo install -m 0644 ./pacman/etc/pacman.d/hooks/* -t /etc/pacman.d/hooks/
 
 * xbps setup config files for VoidLinux
 * remove/extract `~/.Xresources` requirement for Polybar.
-* apt config files for Debian system
 * Migration to [GNU Stow](https://www.gnu.org/software/stow/); Possibly augmented to warn about configuration dependencies.
 
