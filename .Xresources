@@ -37,9 +37,6 @@ URxvt.resize-font.show:     C-question
 URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.url-select.underline: true
 
-! requires urxvt-fullscreen (AUR)
-URxvt.keysym.F11: perl:fullscreen:switch
-
 ! requires urxvt-theme-switch-git (AUR coming soon) - consider forking, the original dev was kindof an idiot
 URxvt.color-themes.themedir: /home/henry/.config/urxvt/themes
 URxvt.color-themes.preprocessor: /usr/bin/cpp
