@@ -11,3 +11,5 @@ mpd/.config/mpd/**
 *.zwc
 .zcompdump
 zsh/.config/antigen/antigen.zsh
+
+.directory
