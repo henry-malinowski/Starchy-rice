@@ -9,6 +9,7 @@ Plug 'morhetz/gruvbox'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'davidhalter/jedi-vim'
 Plug 'tell-k/vim-autopep8'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 syntax enable
