@@ -119,6 +119,6 @@ sudo install -m 0644 ./pacman/etc/pacman.d/hooks/* -t /etc/pacman.d/hooks/
 ### TODO:
 
 * xbps setup config files for VoidLinux
-* remove/extract `~/.Xresources` requirement for Polybar.
+* remove/extract `~/.Xresources` requirement for Polybar. This will help with using SwayWM.
 * Migration to [GNU Stow](https://www.gnu.org/software/stow/); Possibly augmented to warn about configuration dependencies.
 
