@@ -64,7 +64,7 @@ Once installed...
 # from inside the repo
 stow zsh
 ln -s $ANTIGEN_INIT $HOME/.config/antigen/antigen.zsh
-sudo chsh $USER --shell=/bin/zsh
+sudo chsh $USER --shell=$(which zsh)
 # enter password
 # restart shell
 ```
