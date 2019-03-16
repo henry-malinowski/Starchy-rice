@@ -51,8 +51,8 @@ i3-gaps, this also requires `~/.Xresources` at the moment.
 If a theme is not loaded both bash and zsh have matching PS1 prompts.
 
 * [zsh](https://www.archlinux.org/packages/extra/x86_64/zsh/)
+* [Generic Colouriser](https://www.archlinux.org/packages/community/any/grc/)
 * [antigen (AUR)](https://aur.archlinux.org/packages/antigen-git)
-* [Generic Colouriser (AUR)](https://aur.archlinux.org/packages/grc/)
 
 In order to make this installation portable, the initialization script for Antigen will be symlinked into our the antigen folder after installation.
 
