@@ -1,6 +1,8 @@
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
+Plug 'Valloric/YouCompleteMe'
+Plug 'Raimondi/delimitMate'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -30,3 +32,6 @@ set clipboard=unnamedplus
 "Set up Gruvbox 'morhetz/gruvbox'"
 let g:gruvbox_italic=1
 colorscheme gruvbox
+
+" Allow saving of files as sudo. You should really use `sudoedit` instead
+cmap w!! w !sudo tee > /dev/null %
