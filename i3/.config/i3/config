@@ -46,7 +46,7 @@ exec_always --no-startup-id setxkbmap -layout us,ru
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # start NetworkManager applet. Somestimes the GUI is easier
-exec --no-startup-id exec nm-applet --no-agent
+exec --no-startup-id nm-applet --no-agent
 
 # Compositer (should help fix tearing) May conflict with startx / .xinitrc
 exec --no-startup-id compton
@@ -105,7 +105,6 @@ bindsym $mod+Shift+u resize shrink height 10 px or 10 ppt
 
 bindsym $mod+i 		 exec $term -e htop
 bindsym $mod+Shift+i resize grow height 10 px or 10 ppt
-
 bindsym $mod+o       sticky toggle
 bindsym $mod+Shift+o resize grow width 10 px or 10 ppt
 
@@ -186,11 +185,6 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 ###---Floating window settings---###
-for_window [title="GIMP Startup"] move workspace $ws5
-for_window [class="Gimp"] move workspace $ws5
-for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 50 px or 50ppt
-for_window [window_role="gimp-toolbox"] floating disable; move right; resize grow width 20 px or 20ppt
-
 # arandr floating/center
 for_window [title="Screen Layout Editor"] floating enable
 for_window [title="Screen Layout Editor"] resize set 650 450
