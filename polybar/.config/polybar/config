@@ -151,12 +151,6 @@ format-online = <label-song>  <icon-prev>  <icon-stop>  <toggle>  <icon-next>  <
 
 host = 127.0.0.1
 port = 6600
-; Wuncon Siji (font required)
-;icon-prev = 
-;icon-stop = 
-;icon-play = 
-;icon-pause = 
-;icon-next = 
 
 ; Symbols Nerd Font
 icon-prev = 
@@ -176,10 +170,14 @@ label-song-maxlen = 40
 label-song-ellipsis = true
 
 ; Only applies if <bar-progress> is used
-bar-progress-width = 30
-bar-progress-indicator = |
-bar-progress-fill = -
-bar-progress-empty = -
+bar-progress-width = 17
+bar-progress-indicator = ━
+bar-progress-indicator-font = 1
+bar-progress-fill = ━
+bar-progress-fill-font = 1
+bar-progress-empty = ━
+bar-progress-empty-font = 1
+
 bar-progress-gradient = true
 bar-progress-foreground-0 = ${xrdb:color13}
 bar-progress-foreground-1 = #4A73CB
@@ -209,15 +207,15 @@ type = internal/xbacklight
 format = <label> <bar>
 label = BL
 
-bar-width = 20
-bar-indicator = |
+bar-width = 10
+bar-indicator = ━
 bar-indicator-foreground = #ff
 bar-indicator-font = 1
-bar-fill = -
-bar-fill-font = 2
+bar-fill = ━
+bar-fill-font = 1
 bar-fill-foreground = #9f78e1
-bar-empty = -
-bar-empty-font = 2
+bar-empty = ━
+bar-empty-font = 1
 bar-empty-foreground = ${colors.foreground-alt}
 
 [module/backlight-acpi]
@@ -323,7 +321,7 @@ format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
-bar-volume-width = 20
+bar-volume-width = 10
 bar-volume-foreground-0 = ${xrdb:color14}
 bar-volume-foreground-1 = ${xrdb:color14}
 bar-volume-foreground-2 = ${xrdb:color14}
@@ -335,12 +333,12 @@ bar-volume-foreground-7 = ${xrdb:color5}
 bar-volume-foreground-8 = ${xrdb:color5}
 bar-volume-foreground-9 = ${xrdb:color1}
 bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 0
-bar-volume-fill = -
-bar-volume-fill-font = 0
-bar-volume-empty = -
-bar-volume-empty-font = 0
+bar-volume-indicator = ━
+bar-volume-indicator-font = 1
+bar-volume-fill = ━
+bar-volume-fill-font = 1
+bar-volume-empty = ━
+bar-volume-empty-font = 1
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
