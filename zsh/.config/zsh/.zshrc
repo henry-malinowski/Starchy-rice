@@ -70,7 +70,7 @@ unset grc_init
 # manually setup dir_colors because the plugin is bugged
 # It (incorrectly) assumes that $HOME is $ZDOTDIR; this is only true by default
 if [ -f "$ZDOTDIR/.dir_colors" ]; then
-    eval "`dircolors $ZDOTDIR/.dir_colors`"
+    eval "$(dircolors $ZDOTDIR/.dir_colors)"
 fi
 
 # load aliases after GRC to override it. Specifically `ls` because our's is cooler
