@@ -22,4 +22,4 @@ if [ "$(pidof 'i3')" ]; then
     fi
 fi
 
-
+export FZF_DEFAULT_COMMAND="git ls-files --cached --others --exclude-standard | fd --type f --type l --follow --exclude .git"
