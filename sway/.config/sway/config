@@ -33,10 +33,10 @@ exec --no-startu-id mako
 output * bg /home/henry/.config/wallpaper fill
 
 ### Idle configuration
-#
-# Example configuration:
-#
- exec swayidle -w \
+# hides cursor after 5 seconds
+seat * hide_cursor 5000
+
+exec swayidle -w \
           timeout 360 'swaymsg "output * dpms off"' \
                resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f --image /home/henry/Pictures/Wallpapers/Vector_shuttle_lockscreen.png'
@@ -235,20 +235,20 @@ bar {
 ###---Audio and Music Definitions---###
 # For mpc:
 set $music      $term -e ncmpcpp
-set $toggle     mpc toggle
-set $pause      mpc pause
-set $next       mpc next
-set $prev       mpc cdprev
-set $lilfor     mpc seek +10
-set $bigfor     mpc seek +30
-set $lilbak     mpc seek -10
-set $bigbak     mpc seek -30
-set $beg        mpc seek 0%
+set $pause      playerctl play-pause
+set $trupause   playerctl pause
+set $next       playerctl next
+set $prev       playerctl cdprev
+set $lilfor     playerctl position 10+
+set $bigfor     playerctl position 30+
+set $lilbak     playerctl position 10-
+set $bigbak     playerctl position 30-
+set $beg        playerctl position 0
 
 #For PULSEAUDIO/PAMIXER
-set $inc     pamixer               -i 5
+set $inc     pamixer               -i 4
 set $biginc  pamixer --allow-boost -i 15
-set $dec     pamixer               -d 5
+set $dec     pamixer               -d 4
 set $bigdec  pamixer --allow-boost -d 15
 set $mute    pamixer --allow-boost -t
 set $micmute pamixer --allow-boost -t
