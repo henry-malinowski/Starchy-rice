@@ -9,3 +9,5 @@ When = PostTransaction
 Depends = pacman-contrib
 Exec = /usr/bin/paccache -ruk0
 
+# vim: ft=systemd
+

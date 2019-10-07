@@ -98,24 +98,24 @@ draw_bold_text_with_bright_colors: false
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Iosevka
+    family: Fantasque Sans Mono
     # Style can be specified to pick a specific face.
     style: Regular
 
   # The bold font face
   bold:
-    family: Iosevka
+    family: Fantasque Sans Mono
     # Style can be specified to pick a specific face.
     style: Bold
 
   # The italic font face
   italic:
-    family: Iosevka
+    family: Fantasque Sans Mono
     # Style can be specified to pick a specific face.
     style: Italic
 
   # Point size of the font
-  size: 12.0
+  size: 13.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -133,7 +133,7 @@ font:
 # Should display the render timer
 debug.render_timer: false
 
-# Colors (Solarized Dark)
+# Colors (Gruvbox Medium)
 colors:
   # Default colors
   primary:
