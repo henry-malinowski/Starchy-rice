@@ -2,7 +2,7 @@
 allow_bold = false
 audible_bell = true
 #dynamic_title = true
-font = Iosevka 11
+font = Fantasque Sans Mono 12
 #fullscreen = true
 #geometry = 640x480
 icon_name = terminal
